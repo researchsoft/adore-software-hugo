@@ -1,0 +1,57 @@
+{{- define "main" -}}
+
+{{ partial "page_header.html" . }}
+
+<div class="universal-wrapper">
+  {{ with .Content }}
+    <div class="article-style">{{ . }}</div>
+  {{ end }}
+
+  {{ $paginator := .Paginate .Pages }}
+
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 news-grid">
+    {{ range $paginator.Pages }}
+    {{ $item := . }}
+    {{ $link := $item.RelPermalink }}
+    {{ $resource := partial "blox-core/functions/get_featured_image.html" $item }}
+    {{ $anchor := $item.Params.image.focal_point | default "Smart" }}
+
+    {{ $summary := "" }}
+    {{ if $item.Params.summary }}
+      {{ $summary = $item.Params.summary | markdownify | emojify }}
+    {{ else if $item.Summary }}
+      {{ $summary = $item.Summary }}
+    {{ end }}
+
+    <div class="col">
+      <div class="news-card card h-100">
+        {{ with $resource }}
+          {{ $image := .Fill (printf "600x400 %s" $anchor) }}
+          {{ if ne $image.MediaType.SubType "gif" }}{{ $image = $image.Process "webp" }}{{ end }}
+          <a href="{{ $link }}">
+            <img src="{{ $image.RelPermalink }}"
+                 width="{{ $image.Width }}" height="{{ $image.Height }}"
+                 class="card-img-top" alt="{{ $item.Title }}" loading="lazy">
+          </a>
+        {{ end }}
+        <div class="card-body d-flex flex-column">
+          <p class="news-card-date text-muted small mb-1">
+            {{- $item.Date.Format "January 2, 2006" -}}
+          </p>
+          <h5 class="card-title">
+            <a href="{{ $link }}">{{ $item.Title }}</a>
+          </h5>
+          {{ with $summary }}
+          <p class="card-text flex-grow-1">{{ . }}</p>
+          {{ end }}
+          <a href="{{ $link }}" class="btn btn-primary btn-sm mt-auto news-card-btn">Read more</a>
+        </div>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+
+  {{ partial "pagination" . }}
+</div>
+
+{{- end -}}

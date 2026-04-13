@@ -1,0 +1,18 @@
+# Theme metadata
+name = "resa"
+
+[light]
+  # Primary — ADORE.software blue
+  primary = "#0066cc"
+
+  # Menu
+  menu_primary = "#fff"
+  menu_text = "#0066cc"
+  menu_text_active = "#004499"
+  menu_title = "#0066cc"
+
+  link = "#0066cc"
+
+  # Home sections
+  home_section_odd = "rgb(255, 255, 255)"
+  home_section_even = "rgb(232, 240, 250)"

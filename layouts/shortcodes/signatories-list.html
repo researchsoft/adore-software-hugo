@@ -1,0 +1,47 @@
+{{/* signatories-list shortcode
+   Renders all signatories as Bootstrap cards from data/signatories.yaml
+   Usage: {{< signatories-list >}}
+*/}}
+
+{{ $data := site.Data.signatories }}
+
+<div class="signatories-grid row">
+  {{ range $data.signatories }}
+  <div class="col-6 col-sm-4 col-md-3 mb-4">
+    <div class="signatory-card card h-100 text-center">
+      <div class="signatory-card-img">
+        {{ if .logo }}
+        {{ if .url }}
+        <a href="{{ .url }}" target="_blank" rel="noopener">
+          <img src="/{{ .logo }}" alt="{{ .name }}" class="signatory-logo">
+        </a>
+        {{ else }}
+        <img src="/{{ .logo }}" alt="{{ .name }}" class="signatory-logo">
+        {{ end }}
+        {{ else }}
+        <div class="signatory-placeholder" aria-hidden="true">
+          {{ if eq .type "Organisation" }}
+          <i class="fas fa-building fa-2x"></i>
+          {{ else }}
+          <i class="fas fa-user fa-2x"></i>
+          {{ end }}
+        </div>
+        {{ end }}
+      </div>
+      <div class="card-body d-flex flex-column">
+        <h5 class="signatory-name">
+          {{ if .url }}
+          <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
+          {{ else }}
+          {{ .name }}
+          {{ end }}
+        </h5>
+        <p class="signatory-type">{{ .type }}</p>
+        {{ if .url }}
+        <a href="{{ .url }}" target="_blank" rel="noopener" class="btn btn-sm signatory-visit-btn mt-auto">Visit website</a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+  {{ end }}
+</div>

@@ -1,0 +1,350 @@
+// ── Global typography ──────────────────────────────────────────────────────
+// Primary text colour matching adore.software (dark teal), applied everywhere
+// that is not explicitly white (headers, body, headings, links, etc.)
+$brand-teal: rgb(1, 95, 94);
+$font-stack: "Manrope", "Roboto", "Helvetica Neue", sans-serif;
+
+body {
+  font-family: $font-stack;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $brand-teal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-stack;
+  color: $brand-teal;
+}
+
+h1 {
+  font-size: calc(1.4rem + 1.8vw);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: calc(1.425rem + 2.1vw);
+}
+
+h3 {
+  font-size: calc(1.3rem + 0.6vw);
+  line-height: 1.1em;
+}
+
+.nav-link {
+  font-weight: 500;
+}
+
+a {
+  color: $brand-teal;
+
+  &:hover {
+    color: darken($brand-teal, 10%);
+  }
+}
+
+// Make page header alignment consistent with widget page header alignment
+.universal-wrapper h1 {
+  text-align: center;
+}
+
+// Widen the container to match adore.software (WordPress site uses ~1400px)
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
+// Center the CTA shortcode button
+.cta-group {
+  justify-content: center;
+}
+
+// Navbar: transparent background with white text over the header image
+#navbar-main {
+  background-color: transparent !important;
+  box-shadow: none !important;
+
+  .navbar-brand,
+  .nav-link,
+  .nav-item .nav-link {
+    color: #ffffff !important;
+
+    &:hover,
+    &:focus {
+      color: rgba(255, 255, 255, 0.8) !important;
+    }
+  }
+
+  // Keep toggler visible on mobile
+  .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+    .fas {
+      color: #ffffff;
+    }
+  }
+
+  // Mobile collapsed menu needs a solid background to stay readable
+  @media (max-width: 991px) {
+    .navbar-collapse.show,
+    .navbar-collapse.collapsing {
+      background-image: inherit;
+      background-color: rgba(1, 60, 60, 0.95);
+      padding: 10px 16px;
+      border-radius: 4px;
+    }
+  }
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+
+.logo-image {
+  width: 180px !important;
+  height: 180px !important;
+  object-fit: contain;
+}
+
+.no-logo-text {
+  font-size: 1.5rem;
+}
+
+.header-text {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.center-align {
+  text-align: center;
+}
+
+// Footer styles
+.site-footer {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+// Single background section — logo left, nav centre, secondary right
+.footer-brand-section {
+  padding: 60px 40px;
+}
+
+.footer-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-brand-identity {
+  flex: 0 0 auto;
+
+  .footer-logo-link {
+    display: block;
+    margin-bottom: 14px;
+  }
+
+  .footer-logo {
+    height: 70px;
+    width: auto;
+    // SVG is dark — invert to white
+    filter: brightness(0) invert(1);
+  }
+
+  .footer-brand-tagline {
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    font-size: 0.95rem;
+  }
+}
+
+// Vertical nav stack
+.footer-nav-links {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    white-space: nowrap;
+
+    &:hover {
+      text-decoration: underline;
+      color: #ffffff;
+    }
+  }
+}
+
+// Privacy + Twitter column
+.footer-secondary {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+
+  a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    white-space: nowrap;
+
+    &:hover {
+      text-decoration: underline;
+      color: #ffffff;
+    }
+  }
+
+  svg {
+    display: block;
+  }
+}
+
+// Signatories card grid
+// News grid
+.news-grid {
+  margin-top: 1.5rem;
+}
+
+.news-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  }
+
+  .card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+
+    a {
+      color: $brand-teal;
+      text-decoration: none;
+
+      &:hover {
+        color: darken($brand-teal, 10%);
+      }
+    }
+  }
+
+  .news-card-date {
+    font-size: 0.8rem;
+    color: #6c757d;
+  }
+
+  .news-card-btn {
+    align-self: flex-start;
+  }
+}
+
+// Signatories grid
+.signatories-grid {
+  margin-top: 1rem;
+}
+
+.signatory-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  transition: box-shadow 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.signatory-card-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  background: #f8f9fa;
+  border-radius: 6px 6px 0 0;
+  padding: 12px;
+}
+
+.signatory-logo {
+  max-width: 120px;
+  max-height: 76px;
+  object-fit: contain;
+}
+
+.signatory-placeholder {
+  color: #adb5bd;
+}
+
+.signatory-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  line-height: 1.3;
+
+  a {
+    color: $brand-teal;
+    text-decoration: none;
+
+    &:hover {
+      color: darken($brand-teal, 10%);
+      text-decoration: underline;
+    }
+  }
+}
+
+.signatory-type {
+  font-size: 0.75rem;
+  color: #6c757d;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.signatory-visit-btn {
+  font-size: 0.8rem;
+  color: #0066cc;
+  border-color: #0066cc;
+
+  &:hover {
+    background-color: #0066cc;
+    color: white;
+  }
+}
+
+.footer-copyright-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  color: white;
+  text-align: center;
+
+  p {
+    margin: 8px 0;
+  }
+
+  a {
+    color: white;
+    text-decoration: underline;
+  }
+}

@@ -4,38 +4,26 @@ date: 2024-01-01
 type: page
 ---
 
-## The Declaration
+The Declaration text is available in full on Zenodo:
 
-The **Amsterdam Declaration on Funding Research Software Sustainability** (ADORE.software) aims to raise awareness of the role of funding practice in the sustainability of research software, and to improve that practice.
+[View full text on Zenodo](https://doi.org/10.5281/zenodo.13735888) &nbsp; [Download as PDF](https://zenodo.org/records/13735888/files/Amsterdam%20Declaration%20on%20Funding%20Research%20Software%20Sustainability%20version%201.1.pdf)
 
-### Background
+#### Cite as:
 
-Research software is a critical part of research. It is essential for data collection, analysis, modeling, simulation, and visualization across all research domains. Despite its importance, research software sustainability faces significant challenges due to inadequate funding models and practices.
+Research Software Alliance. (2024). Amsterdam Declaration on Funding Research Software Sustainability (1.1). Zenodo. [https://doi.org/10.5281/zenodo.13735888](https://doi.org/10.5281/zenodo.13735888)
 
-### Our Recommendations
+#### Contributors
 
-The Declaration includes a limited number of focused recommendations for funding organizations:
-
-1. **Recognize research software as a fundamental part of research infrastructure**
-2. **Support the full lifecycle of research software**, from development through maintenance
-3. **Value and support the people who develop and maintain research software**
-4. **Adopt policies that promote open, FAIR, and sustainable research software**
-5. **Invest in community infrastructure** and best practices for research software
-
-### For More Information
-
-- Read the full [ADORE.software Toolkit](/toolkit/) for detailed guidance
-- [Become a signatory](/get-involved/) to show your support
-- View the current [list of signatories](/signatories/)
-
-### Definition
-
-For the purposes of this Declaration, research software is defined as:
-
-> "All forms of software that were created during the research process or for a research purpose."
-
-A fuller description is included in the accompanying ADORE.software Toolkit.
+The Declaration is the product of the collective effort from many people, representing various organisations across the globe. You can find a list of contributing organisations and individuals in [this document](https://docs.google.com/document/d/16dDU3HV5agTyr5dib_fTkDj-9trOxo5We5yvSz6tXeE/edit?usp=sharing).
 
 ---
 
-The Amsterdam Declaration was developed through extensive consultation with research software stakeholders, including funders, researchers, research software engineers, and policy makers from around the world.
+### Who can sign?
+
+The Declaration can be signed by individuals and organisations that support research software and/or the people who develop and maintain it. See our [FAQ](/faq/) for more details.
+
+The following organisations and individuals have already signed up. If you would like your organisation to be listed here, see how to get involved.
+
+[GET INVOLVED](/get-involved/)
+
+{{< signatories-list >}}

@@ -1,8 +1,6 @@
 ---
-title: "DFG signs the Amsterdam Declaration on Funding Research Software Sustainability"
-date: 2024-12-15
-authors:
-  - ADORE.software Team
+title: "DFG signing of the \"Amsterdam Declaration on Funding Research Software Sustainability\""
+date: 2024-12-10
 categories:
   - News
   - Signatories
@@ -10,42 +8,21 @@ tags:
   - DFG
   - funders
   - Germany
+  - signing
 featured: true
 image:
-  filename: dfg-logo.png
+  filename: featured.jpg
   preview_only: false
 ---
 
-We are pleased to announce that the **German Research Foundation (Deutsche Forschungsgemeinschaft - DFG)** has signed the Amsterdam Declaration on Funding Research Software Sustainability.
+_(This news item was originally posted on[the DFG website](https://www.dfg.de/en/news/news-topics/announcements-proposals/2024/ifr-24-114))_.
 
-<!--more-->
+By signing the “Amsterdam Declaration on Funding Research Software Sustainability” (“Amsterdam Declaration” for short), the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) is underpinning its international commitment to improving the reusability of research software. Aimed at funding organisations in science and the humanities, the Amsterdam Declaration pursues the goal of strengthening the sustainability of research software based on financial, organisational and policy measures. The Declaration contains twelve recommendations which seek to optimise the way research software is handled by funding organisations. Four overarching topics are addressed: A) Research Software Practice, B) Research Software Ecosystem, C) Research Software Personnel and D) Research Software Ethics. Three concrete recommendations are provided for each of these overarching topics.
 
-The DFG is one of the world's leading research funding organizations, supporting research across all scientific disciplines in Germany. Their signature represents a significant commitment to improving research software sustainability and supporting the people who develop and maintain research software.
+By signing the Amsterdam Declaration, the DFG is reaffirming its commitment to promoting the sustainability of research software, as well as paving the way for active support of international efforts to standardise research software and its funding. This step also formalises the DFG’s commitment to open science, including the recognition of software development as an academic achievement. The DFG’s international involvement in the context of the Amsterdam Declaration aligns perfectly with its initiatives to improve the management of research software.
 
-## DFG's Commitment to Research Software
+## Further Information
 
-The DFG has been a leader in recognizing the importance of research software, including:
-
-- Supporting research software infrastructure
-- Funding research software engineering positions
-- Developing policies for software citation and recognition
-- Investing in training and capacity building
-
-## Significance of This Signature
-
-As a major international funder, DFG's signature of the Amsterdam Declaration:
-
-- Demonstrates leadership in research software sustainability
-- Encourages other funders to adopt similar practices
-- Validates the importance of the Declaration's recommendations
-- Strengthens the international movement for better software funding
-
-## About the Amsterdam Declaration
-
-The Amsterdam Declaration provides recommendations to improve funding practices for research software, ensuring its long-term sustainability and the support of software developers.
-
-Learn more about the [Declaration](/declaration/) and see the full list of [signatories](/signatories/).
-
----
-
-**#ADOREsoftware**
+  * [www.dfg.de/research-software](https://www.dfg.de/en/basics-topics/basics-and-principles-of-funding/research-software)
+  * [https://adore.software](https://adore.software/)
+  * [www.researchsoft.org](https://www.researchsoft.org/)

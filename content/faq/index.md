@@ -1,89 +1,39 @@
 ---
-title: "Frequently Asked Questions"
+title: "FAQ"
 date: 2024-01-01
 type: page
 ---
 
-## FAQ
+### What is research software?
 
-### General Questions
+For the purpose of the Declaration, research software is defined as: "Source code files, algorithms, scripts, computational workflows and executables that were created during the research process or for a research purpose. Software components (e.g., operating systems, libraries, dependencies, packages, scripts, etc.) that are used for research but were not created during or with a clear research intent should be considered software in research and not Research Software. This differentiation may vary between disciplines." ([Gruenpeter 2021](https://doi.org/10.5281/zenodo.5504016), as implemented in the [FAIR for Research Software Principles](https://doi.org/10.1038/s41597-022-01710-x))
 
-**Q: What is the Amsterdam Declaration on Funding Research Software Sustainability?**
+### What are the options to participate?
 
-A: The Amsterdam Declaration (ADORE.software) is an international initiative that provides recommendations to improve how research funders support research software. It aims to ensure the long-term sustainability of research software through better funding practices.
+There are several options for getting involved.
 
-**Q: Who created the Declaration?**
+1. You can subscribe to the [ReSA newsletter](https://landing.mailerlite.com/webforms/landing/i5e1h2) to receive updates on news related to the declaration and future activities.
+2. You can get in touch with us using the contact form (or by sending us an email).
+3. If you want to publicly show your support for the declaration, you can become a (individual and/or organisational) Signatory of the Declaration.
 
-A: The Declaration was developed through collaboration between research funders, research software engineers, researchers, and other stakeholders in the research software ecosystem. It is supported by the Research Software Alliance (ReSA).
+### Who can be a Signatory of ADORE.software?
 
-**Q: What is research software?**
+The Declaration can be signed by individuals and organisations that support research software and/or the people who develop and maintain it. By becoming a Signatory, individuals and organisations publicly state that they agree with the recommendations in the Declaration.
 
-A: For the purposes of this Declaration, research software is defined as "all forms of software that were created during the research process or for a research purpose." This includes analysis scripts, simulation software, data processing tools, visualization software, and more.
+### What does it mean to be a Signatory?
 
-### Signing the Declaration
+Signatories of ADORE.software endorse the adoption of the Declaration's recommendations to improve the research software ecosystem and the research that it enables.
 
-**Q: Who can sign the Declaration?**
+Individual Signatories acknowledge the importance of the recommendations of ADORE.software and advocate for their implementation.
 
-A: The Declaration can be signed by individuals and organizations that support research software and the people who develop and maintain it. This includes:
-- Researchers and research software engineers
-- Funding organizations
-- Research institutions and universities
-- Companies and non-profits
-- Professional associations
+Organisational Signatories will aim to implement (to the extent possible) the recommendations of ADORE.software in their own organisation. They also aim to update other Signatories and the community on their progress to implementing the recommendations.
 
-**Q: What does signing mean?**
+### Who is in the ADORE.software stewardship group?
 
-A: By signing, you publicly state that you agree with the principles and recommendations of the Amsterdam Declaration and support efforts to improve research software sustainability.
+The ADORE.software stewardship group is responsible for developing and implementing the Declaration outreach programme. The programme will focus on actively encouraging potential stakeholders to sign or support the Declaration and engage relevant signatories from around the world. The outreach programme will encompass activities such as a formal signing event, and sharing of experiences on the implementation of ADORE.software Recommendations.
 
-**Q: Does signing commit my organization to specific actions?**
+Initially, the ADORE.software stewardship group is the same as the [ReSA Steering Committee](https://www.researchsoft.org/governance/). However, the future governance will ideally be a structure where organisational signatories will be able to vote on matters about ADORE.software and where a smaller representation of the signatories could act as a board.
 
-A: Signing indicates support for the Declaration's principles. While we encourage organizations to implement the recommendations, signing itself is a public statement of alignment rather than a binding commitment to specific actions.
+### Who has expressed interest in becoming a signatory?
 
-**Q: How do I sign?**
-
-A: Visit our [Get Involved](/get-involved/) page for details on how individuals and organizations can sign the Declaration.
-
-### Using the Declaration
-
-**Q: How can my organization use the Declaration?**
-
-A: Organizations can:
-- Reference it in policy development
-- Use the Toolkit to guide implementation
-- Share it with stakeholders to build consensus
-- Cite it in funding proposals and reports
-
-**Q: Is there an implementation toolkit?**
-
-A: Yes! The [ADORE.software Toolkit](/toolkit/) provides practical guidance, examples, and resources for implementing the Declaration's recommendations.
-
-**Q: Can I translate the Declaration?**
-
-A: Yes, we welcome translations. Please [contact us](/contact/) to coordinate translation efforts and ensure consistency.
-
-### Community and Updates
-
-**Q: How can I stay updated about ADORE.software?**
-
-A: You can:
-- Subscribe to the [ReSA newsletter](https://dashboard.mailerlite.com/forms/778129/110635094443558050/share)
-- Follow #ADOREsoftware on social media
-- Check the [News](/news/) section of this website
-- Join the ReSA community on Slack
-
-**Q: Are there events related to the Declaration?**
-
-A: Yes, ADORE.software and ReSA organize workshops, webinars, and sessions at conferences. Check the [ReSA events page](https://www.researchsoft.org/events/) for upcoming opportunities.
-
-**Q: How can I contribute to ADORE.software?**
-
-A: There are many ways to contribute:
-- Sign the Declaration
-- Share your implementation experiences
-- Contribute case studies to the Toolkit
-- Help translate materials
-- Participate in community discussions
-
-### Still Have Questions?
-
-If your question isn't answered here, please [contact us](/contact/).
+Between March 2023 and August 2023 we collected feedback from potential signatories and other stakeholders. Those that expressed their interest in signing or supporting ADORE.software and are listed on the website.

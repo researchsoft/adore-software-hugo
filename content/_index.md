@@ -6,30 +6,26 @@ layout: "default"
 
 sections:
   - block: markdown
+    id: hero
     content: 
       title:
       text: |
-        # Research software is a critical part of research
-        {style="color: white; font-size: 3rem; text-align: center; font-weight: bold; margin-bottom: 2rem;"}
-
-        The [Amsterdam Declaration on Funding Research Software Sustainability](declaration/) is setting the future international agenda and comprehensively changing the way funders deal with research software.
-        {style="color: white; font-size: 1.5rem; text-align: center; line-height: 1.6;"}
-        
-        <div style="text-align: center; margin-top: 40px; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-          <a href="/get-involved/" target="_self" 
-            style="background-color: #0066cc; color: white; padding: 15px 30px; border-radius: 6px; text-decoration: none; display: inline-block; font-size: 1.2rem; font-weight: bold;">
-            GET INVOLVED
-          </a>
-          <a href="/declaration/" target="_self" 
-            style="background-color: white; color: #0066cc; padding: 15px 30px; border-radius: 6px; text-decoration: none; display: inline-block; font-size: 1.2rem; font-weight: bold;">
-            Read the Declaration
-          </a>
+        <div style="display: flex; align-items: center; gap: 3rem; flex-wrap: wrap;">
+          <div style="flex: 1; min-width: 280px;">
+            <h1 style="color: white; font-size: 2.8rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;">Research software is a critical part of research</h1>
+            <p style="color: white; font-size: 1.25rem; line-height: 1.6; margin-bottom: 2.5rem;">The <a href="declaration/" style="color: white; text-decoration: underline;">Amsterdam Declaration on Funding Research Software Sustainability</a> is setting the future international agenda and comprehensively changing the way funders deal with research software.</p>
+            <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+              <a href="/get-involved/" style="background-color: #0066cc; color: white; padding: 14px 28px; border-radius: 6px; text-decoration: none; font-size: 1.1rem; font-weight: bold;">GET INVOLVED</a>
+              <a href="/declaration/" style="background-color: white; color: #0066cc; padding: 14px 28px; border-radius: 6px; text-decoration: none; font-size: 1.1rem; font-weight: bold;">Read the Declaration</a>
+            </div>
+          </div>
+          <div style="flex: 1; min-width: 280px;">
+            <img src="/uploads/homepage-group.jpg" alt="Group discussing around a table" style="width: 100%; height: auto; border-radius: 8px; display: block;" />
+          </div>
         </div>
 
     design:
       background:
-        gradient_start: '#0066cc'
-        gradient_end: '#004499'
         text_color_light: true
       spacing:
         padding: ["6rem", "2rem", "6rem", "2rem"]
@@ -102,13 +98,6 @@ sections:
             style="background-color: #0066cc; color: white; padding: 15px 30px; border-radius: 6px; text-decoration: none; display: inline-block; font-weight: bold; margin: 20px 0;">
             GET INVOLVED
           </a>
-          
-          <p style="margin-top: 30px;">
-            <a href="https://twitter.com/search?q=%23AdoreSoftware&src=typed_query" target="_blank" 
-              style="color: #0066cc; text-decoration: none; font-weight: bold;">
-              FOLLOW US ON TWITTER
-            </a>
-          </p>
         </div>
     design:
       spacing:
@@ -118,18 +107,4 @@ sections:
         gradient_end: '#004499'
         text_color_light: true
 
-  - block: markdown
-    content:
-      title: "Sign up to receive updates about ADORE.software"
-      text: |
-        <div style="text-align: center;">
-          <p>Stay informed about the Amsterdam Declaration and research software funding developments.</p>
-          <a href="https://dashboard.mailerlite.com/forms/778129/110635094443558050/share" target="_blank" 
-            style="background-color: white; color: #0066cc; padding: 12px 25px; border-radius: 6px; text-decoration: none; display: inline-block; font-weight: bold; margin-top: 20px;">
-            SUBSCRIBE TO ReSA NEWSLETTER
-          </a>
-        </div>
-    design:
-      spacing:
-        padding: ["4rem", "2rem"]
 ---

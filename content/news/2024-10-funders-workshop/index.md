@@ -1,8 +1,6 @@
 ---
 title: "International Research Software Funders Workshop 2024 – Building a Sustainable Future for Research Software"
-date: 2024-10-28
-authors:
-  - ADORE.software Team
+date: 2024-10-21
 categories:
   - News
   - Events
@@ -10,71 +8,19 @@ tags:
   - workshop
   - funders
   - sustainability
+  - Uppsala
 featured: true
 image:
-  filename: funders-workshop-2024.jpg
+  filename: featured.jpg
   preview_only: false
 ---
 
-The International Research Software Funders Workshop 2024 brought together representatives from leading funding organizations worldwide to discuss building a sustainable future for research software.
+The 2024 [International Research Software Funders Workshop](https://adore.software/2024-international-research-software-funders-workshop/) continued to progress the way funders sustain and support research software. This hybrid event in September in Uppsala, Sweden, brought together [funders and experts in research software](https://adore.software/2024-international-research-software-funders-workshop/) to discuss operationalising the [Amsterdam Declaration on Funding Research Software Sustainability](https://adore.software/) (ADORE.software). ADORE.software aims to raise awareness of the role of funding practice in the sustainability of research software, and to improve that practice. 
 
-<!--more-->
+This year’s workshop focused on developing funders’ monitoring and evaluation frameworks to assess what is working and why in funders’ support for research software impact. Presentations from this year’s Funder Workshop and the [EVERSE](https://everse.software/) (European Virtual Institute for Research Software Excellence) satellite event are available [here](https://zenodo.org/communities/2024-research-software-funders-workshop/records?q=&l=list&p=1&s=10&sort=newest). See also [SciLifeLab and Data Centre co-host two events: Elevating the importance of research software in Sweden](https://www.scilifelab.se/news/scilifelab-and-data-centre-co-host-two-events-elevating-the-importance-of-research-software-in-sweden/) and a summary of the EVERSE event, [Building the future of research software as a first-class citizen in science; a global perspective](https://doi.org/10.5281/zenodo.13915755).
 
-## Workshop Overview
+Are you a funder who is interested in learning more about research software and how to explicitly support research software as part of your funding program?
 
-Held in October 2024, the workshop convened:
-
-- Representatives from national and international funding agencies
-- Research software experts and practitioners
-- Policy makers and institutional leaders
-- Members of the research software community
-
-## Key Themes
-
-Discussions focused on:
-
-### Funding Models
-- Innovative approaches to funding research software
-- Long-term sustainability mechanisms
-- Support for maintenance and evolution
-- Coordination across funders
-
-### People and Careers
-- Career paths for research software professionals
-- Recognition and reward structures
-- Training and capacity building
-- Diversity and inclusion in research software
-
-### Policy and Practice
-- Implementation of the Amsterdam Declaration recommendations
-- Sharing best practices across organizations
-- Measuring impact and success
-- Coordination with related initiatives
-
-## Outcomes
-
-The workshop resulted in:
-
-- Strengthened international collaboration among funders
-- Shared commitment to the Amsterdam Declaration principles
-- Action plans for implementing recommendations
-- Continued dialogue through working groups
-
-## Amsterdam Declaration
-
-The workshop reinforced the importance of the Amsterdam Declaration as a framework for improving research software funding practices. Several attendees committed to signing or had already signed the Declaration.
-
-## Next Steps
-
-Participants agreed to:
-
-- Continue regular convenings of research software funders
-- Share implementation experiences and lessons learned
-- Develop collaborative funding mechanisms
-- Expand the community of practice
-
----
-
-Learn more about the [Amsterdam Declaration](/declaration/) and [get involved](/get-involved/) in improving research software sustainability.
-
-**#ADOREsoftware**
+  * Show your support for ADORE.software by [signing the Declaration](https://adore.software/get-involved/)
+  * Join the Funders Forum by [contacting ReSA](mailto:info@researchsoft.org) (or encourage your funders to join!)
+  * [Subscribe](https://www.researchsoft.org/news/)to the ReSA monthly newsletter for [ADORE.software](https://adore.software/)updates

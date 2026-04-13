@@ -1,7 +1,4 @@
 # Navigation Links
-#   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
-#     desired widget in your `content/home/` folder.
-#   The weight parameter defines the order that the links will appear in.
 
 main:
   - name: 'About'
@@ -12,129 +9,23 @@ main:
     url: declaration
     weight: 20
 
-  - name: 'Toolkit'
-    url: toolkit
-    weight: 30
-
   - name: 'Signatories'
     url: signatories
+    weight: 30
+
+  - name: 'Toolkit'
+    url: toolkit
     weight: 40
 
   - name: 'News'
     url: news
     weight: 50
 
-  - name: 'Get Involved'
-    url: get-involved
-    weight: 60
-
-  - name: 'FAQ'
-    url: faq
-    weight: 70
-
   - name: 'Contact'
     url: contact
-    weight: 80
-  - parent: '<span style="font-size: 1.2rem;">Resources</span>'
-    name: '<span style="font-size: 1rem;">ReSA Resources</span>'
-    url: resource/resa-resources
-    weight: 10
-  - parent: '<span style="font-size: 1.2rem;">Resources</span>'
-    name: '<span style="font-size: 1rem;">Guidelines</span>'
-    url: resource/guidelines
-    weight: 20
-  - parent: '<span style="font-size: 1.2rem;">Resources</span>'
-    name: '<span style="font-size: 1rem;">Funding Opportunities</span>'
-    url: resource/funding-opportunities
-    weight: 30
-  - parent: '<span style="font-size: 1.2rem;">Resources</span>'
-    name: '<span style="font-size: 1rem;">Software Policies</span>'
-    url: resource/software-policies
-    weight: 40
-  - parent: '<span style="font-size: 1.2rem;">Resources</span>'
-    name: '<span style="font-size: 1rem;">ADORE.software Declaration</span>'
-    url: https://adore.software
-    weight: 50
-  - parent: '<span style="font-size: 1.2rem;">Resources</span>'
-    name: '<span style="font-size: 1rem;">Research Software Engineers (RSEs)</span>'
-    url: resource/research-software-engineers
     weight: 60
-  - parent: '<span style="font-size: 1.2rem;">Resources</span>'
-    name: '<span style="font-size: 1rem;">Collaborate with ReSA</span>'
-    url: resource/collaborate
-    weight: 70
 
-  - name: '<span style="font-size: 1.2rem;">News</span>'
-    url: news
-    weight: 50
-  - name: '<span style="font-size: 1.2rem;">Events</span>'
-    weight: 60
-  - parent: '<span style="font-size: 1.2rem;">Events</span>'
-    name: '<span style="font-size: 1rem;">Current Events</span>'
-    url: events
-    weight: 60
-  - parent: '<span style="font-size: 1.2rem;">Events</span>'
-    name: '<span style="font-size: 1rem;">Past Events</span>'
-    url: past-events
-    weight: 61
-  - parent: '<span style="font-size: 1.2rem;">Events</span>'
-    name: '<span style="font-size: 1rem;">ReSA Community Calls</span>'
-    url: events/community-calls
-    weight: 62
-  - parent: '<span style="font-size: 1.2rem;">Events</span>'
-    name: '<span style="font-size: 1rem;">RSEng & GenAI workshop</span>'
-    url: events/rse-ai-workshop 
-    weight: 63
-  - name: '<span style="font-size: 1.2rem;">Blog</span>'
-    url: blog
-    weight: 70
-    
-  - name: '<span style="font-size: 1.2rem;">IRSC</span>'
-    url: irsc
-    weight: 71
-  - parent: '<span style="font-size: 1.2rem;">IRSC</span>'
-    name: '<span style="font-size: 1rem;">About IRSC</span>'
-    url: irsc/about
-    weight: 72
-  - parent: '<span style="font-size: 1.2rem;">IRSC</span>'
-    name: '<span style="font-size: 1rem;">Agenda</span>'
-    url: https://docs.google.com/document/d/1T01d_KNCp3QiWXbCgU2uZMQG4sOFqsb1u1r5FiCQP-M/edit?tab=t.0
-    weight: 73
-  - parent: '<span style="font-size: 1.2rem;">IRSC</span>'
-    name: '<span style="font-size: 1rem;">Venue & Travel</span>'
-    url: irsc/venue-travel
-    weight: 74
-  - parent: '<span style="font-size: 1.2rem;">IRSC</span>'
-    name: '<span style="font-size: 1rem;">Call for Proposals</span>'
-    url: irsc/proposals
-    weight: 75
-  - parent: '<span style="font-size: 1.2rem;">IRSC</span>'
-    name: '<span style="font-size: 1rem;">Program Committee</span>'
-    url: irsc/program-committee
-    weight: 76
-  - parent: '<span style="font-size: 1.2rem;">IRSC</span>'
-    name: '<span style="font-size: 1rem;">Sponsorship</span>'
-    url: irsc/sponsorship
-    weight: 77
-    
-  - name: "<i class='fab fa-github fa-2x'></i>"
-    url: https://github.com/researchsoft/website
-    weight: 80
-  - name: "<i class='fas fa-envelope fa-2x'></i>"
-    url: mailto:info@researchsoft.org
-    weight: 90
-  - name: "<i class='fab fa-slack fa-2x'></i>"
-    url: https://join.slack.com/t/researchsoft/shared_invite/zt-2jrfi0182-_E_yD0_X8oKoB03zCz2lZA
-    weight: 100
-  - name: "<i class='fab fa-linkedin fa-2x'></i>"
-    url: https://www.linkedin.com/company/research-software-alliance/
-    weight: 110
-  - name: "<i class='fab fa-mastodon fa-2x'></i>"
-    url: https://fosstodon.org/@researchsoft
-    weight: 120
-  - name: "<i class='fas fa-globe fa-2x'></i>"
-    url: https://bsky.app/profile/researchsoftware.bsky.social
-    weight: 130
-  - name: "<i class='fas fa-rss fa-2x'></i>"
-    url: /index.xml
-    weight: 140
+main_right:
+  - name: 'Get Involved'
+    url: get-involved
+    weight: 10

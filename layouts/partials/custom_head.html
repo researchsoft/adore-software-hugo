@@ -1,0 +1,26 @@
+{{- $bg := resources.Get "header_bg_landing_2@2x-scaled.jpg" | fingerprint -}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  #navbar-main {
+    background-image: url('{{ $bg.RelPermalink }}');
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: transparent !important;
+  }
+  #hero {
+    background-image: url('{{ $bg.RelPermalink }}');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .footer-brand-section {
+    background-image: url('{{ $bg.RelPermalink }}');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+</style>

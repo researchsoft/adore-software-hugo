@@ -19,7 +19,6 @@ marketing:
     local_business_type: ''
     org_name: 'ADORE.software'
     description: 'Amsterdam Declaration on Funding Research Software Sustainability - Setting the future international agenda for research software funding.'
-    twitter: 'AdoreSoftware'
   analytics:
     google_analytics: ''
     baidu_tongji: ''
@@ -38,7 +37,7 @@ header:
     show_logo: true
     show_language: false
     show_day_night: true
-    show_search: true
+    show_search: false
     highlight_active_link: false
 
 # Site footer
@@ -71,10 +70,6 @@ features:
     enable: false
   privacy_pack:
     enable: false
-  repository:
-    url: 'https://github.com/RichardLitt/adore-software-hugo'
-    content_dir: content
-    branch: main
   avatar:
     gravatar: false
     shape: circle
@@ -117,16 +112,4 @@ publications:
   date_format: January 2006
   citation_style: apa
 
-social:
-  - icon: linkedin
-    icon_pack: fab
-    url: "https://www.linkedin.com/in/your-profile/"
-    title: "LinkedIn"
-  - icon: github
-    icon_pack: fab
-    url: "https://github.com/your-org"
-    title: "GitHub"
-  - icon: twitter
-    icon_pack: fab
-    url: "https://twitter.com/your-handle"
-    title: "Twitter"
+
