@@ -123,8 +123,6 @@
         <ul class="navbar-nav ml-md-auto">
         {{ end }}
 
-          {{/* Only show main_right items on non-homepage pages */}}
-          {{ if not $current_page.IsHome }}
           {{ range site.Menus.main_right }}
 
           {{/* Set target for link. */}}
@@ -142,7 +140,6 @@
           </li>
 
           {{ end }}
-          {{ end }}{{/* end if not homepage */}}
         </ul>
       </div><!-- /.navbar-collapse -->
 

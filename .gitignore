@@ -5,3 +5,5 @@ resources/
 tmp/
 htmltest
 hugo_stats.json
+.env
+.mcp.json
