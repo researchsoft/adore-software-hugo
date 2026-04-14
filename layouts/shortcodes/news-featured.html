@@ -1,0 +1,38 @@
+{{/* Renders a single news post in full-width showcase style (image left, text right).
+     Usage: {{< news-featured slug="2024-09-declaration-open-for-signing" >}}
+*/}}
+{{ $slug := .Get "slug" }}
+{{ $item := site.GetPage (printf "/news/%s" $slug) }}
+{{ if not $item }}{{ errorf "news-featured: page /news/%s not found" $slug }}{{ end }}
+
+{{ $link     := $item.RelPermalink }}
+{{ $resource := partial "blox-core/functions/get_featured_image.html" $item }}
+{{ $anchor   := $item.Params.image.focal_point | default "Smart" }}
+
+{{ $summary := "" }}
+{{ if $item.Params.summary }}
+  {{ $summary = $item.Params.summary | markdownify | emojify }}
+{{ else if $item.Summary }}
+  {{ $summary = $item.Summary }}
+{{ end }}
+
+<div class="row align-items-center news-featured mb-5">
+  {{ with $resource }}
+    {{ $image := .Fill (printf "808x505 %s" $anchor) }}
+    {{ if ne $image.MediaType.SubType "gif" }}{{ $image = $image.Process "webp" }}{{ end }}
+    <div class="col-12 col-md-6 mb-3 mb-md-0">
+      <a href="{{ $link }}">
+        <img src="{{ $image.RelPermalink }}"
+             width="{{ $image.Width }}" height="{{ $image.Height }}"
+             class="img-fluid rounded" alt="{{ $item.Title }}" loading="lazy">
+      </a>
+    </div>
+  {{ end }}
+  <div class="col-12 col-md-6">
+    <h3><a href="{{ $link }}" style="text-decoration:none;">{{ $item.Title }}</a></h3>
+    {{ with $summary }}
+      <div class="news-featured-summary">{{ . }}</div>
+    {{ end }}
+    <a href="{{ $link }}" class="btn btn-sm btn-outline-primary mt-3 d-inline-block">Read more</a>
+  </div>
+</div>

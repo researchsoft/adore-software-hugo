@@ -1,6 +1,10 @@
 ---
 title: "The Amsterdam Declaration is now open for all to sign!"
 date: 2024-09-20
+summary: |
+  The Amsterdam Declaration on Funding Research Software Sustainability (ADORE.software) has now broadened the criteria of who can be a signatory:
+
+  > _"The Declaration can be signed by individuals and organisations that support research software and/or the people who develop and maintain it. By becoming a Signatory, individuals and organisations publicly state that they agree with the recommendations in the Declaration."_
 categories:
   - News
   - Announcement

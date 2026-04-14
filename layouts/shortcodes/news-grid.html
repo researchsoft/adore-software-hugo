@@ -1,0 +1,48 @@
+{{/* Renders a 3-column news card grid, excluding a specific slug.
+     Usage: {{< news-grid count="3" exclude="2024-09-declaration-open-for-signing" >}}
+     count   = number of posts to show (default 3)
+     exclude = slug to skip (e.g. the featured post)
+*/}}
+{{ $count   := .Get "count"   | default "3" | int }}
+{{ $exclude := .Get "exclude" | default "" }}
+
+{{ $pages := where site.RegularPages "Section" "news" }}
+{{ $pages = sort $pages "Date" "desc" }}
+{{ if $exclude }}
+  {{ $pages = where $pages "File.ContentBaseName" "ne" $exclude }}
+{{ end }}
+{{ $pages = $pages | first $count }}
+
+<div class="row row-cols-1 row-cols-md-3 g-4 news-grid mt-0">
+  {{ range $pages }}
+  {{ $item   := . }}
+  {{ $link   := $item.RelPermalink }}
+  {{ $anchor := $item.Params.image.focal_point | default "Smart" }}
+  {{ $resource := partial "blox-core/functions/get_featured_image.html" $item }}
+
+  {{ $summary := "" }}
+  {{ if $item.Params.summary }}
+    {{ $summary = $item.Params.summary | markdownify | emojify }}
+  {{ else if $item.Summary }}
+    {{ $summary = $item.Summary }}
+  {{ end }}
+
+  <div class="col">
+    <div class="news-card-minimal">
+      {{ with $resource }}
+        {{ $image := .Fill (printf "600x400 %s" $anchor) }}
+        {{ if ne $image.MediaType.SubType "gif" }}{{ $image = $image.Process "webp" }}{{ end }}
+        <a href="{{ $link }}">
+          <img src="{{ $image.RelPermalink }}"
+               width="{{ $image.Width }}" height="{{ $image.Height }}"
+               class="img-fluid rounded mb-2" alt="{{ $item.Title }}" loading="lazy">
+        </a>
+      {{ end }}
+      <h5 class="news-card-minimal-title">
+        <a href="{{ $link }}">{{ $item.Title }}</a>
+      </h5>
+      <a href="{{ $link }}" class="news-read-more">Read more</a>
+    </div>
+  </div>
+  {{ end }}
+</div>
