@@ -17,8 +17,8 @@ sections:
             <h1 style="color: white; font-size: 2.8rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;">Research software is a critical part of research</h1>
             <p style="color: white; font-size: 1.25rem; line-height: 1.6; margin-bottom: 2.5rem;">The <a href="declaration/" style="color: white; text-decoration: underline;">Amsterdam Declaration on Funding Research Software Sustainability</a> is setting the future international agenda and comprehensively changing the way funders deal with research software.</p>
             <div style="display: flex; gap: 16px; flex-wrap: wrap;">
-              <a href="/get-involved/" style="background-color: #f5c200; color: rgb(1,95,94); padding: 14px 28px; border-radius: 6px; text-decoration: none; font-size: 1.1rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.04em;">GET INVOLVED</a>
-              <a href="/declaration/" style="background-color: white; color: #0066cc; padding: 14px 28px; border-radius: 6px; text-decoration: none; font-size: 1.1rem; font-weight: bold;">Read the Declaration</a>
+              <a href="/get-involved/" style="background-color: #f5c200; color: rgb(1, 95, 94); padding: 14px 28px; border-radius: 6px; text-decoration: none; font-size: 1.1rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.04em;">GET INVOLVED</a>
+              <a href="/declaration/" style="background-color: white; color: rgb(1, 95, 94); padding: 14px 28px; border-radius: 6px; text-decoration: none; font-size: 1.1rem; font-weight: bold;">Read the Declaration</a>
             </div>
           </div>
           <div style="flex: 1; min-width: 280px;">
@@ -63,7 +63,7 @@ sections:
 
         <div style="text-align: center; margin-top: 30px;">
           <a href="/signatories/" target="_self" 
-            style="background-color: #0066cc; color: white; padding: 12px 25px; border-radius: 6px; text-decoration: none; display: inline-block; font-weight: bold;">
+            style="background-color: rgb(1, 95, 94); color: white; padding: 12px 25px; border-radius: 6px; text-decoration: none; display: inline-block; font-weight: bold;">
             View All Signatories
           </a>
         </div>
@@ -79,10 +79,10 @@ sections:
       text: |
         <div style="text-align: center;">
           <img src="/uploads/adore-logo-symbol.svg" alt="ADORE logo" style="width: 80px; height: 80px; display: block; margin: 0 auto 1.5rem;" />
-          <h3 style="color: rgb(1,95,94);">Would you like to be involved in the adoption of the Declaration?</h3>
-          <p style="font-size: 1.2rem; margin: 20px 0; color: rgb(1,95,94);">Become a Signatory!</p>
+          <h3 style="color: rgb(1, 95, 94);">Would you like to be involved in the adoption of the Declaration?</h3>
+          <p style="font-size: 1.2rem; margin: 20px 0; color: rgb(1, 95, 94);">Become a Signatory!</p>
           <a href="/get-involved/" target="_self"
-            style="background-color: #f5c200; color: rgb(1,95,94); padding: 15px 40px; border-radius: 0; text-decoration: none; display: inline-block; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; margin: 20px 0;">
+            style="background-color: #f5c200; color: rgb(1, 95, 94); padding: 15px 40px; border-radius: 0; text-decoration: none; display: inline-block; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; margin: 20px 0;">
             GET INVOLVED
           </a>
         </div>
