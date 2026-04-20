@@ -406,11 +406,11 @@ a {
 
 .signatory-visit-btn {
   font-size: 0.8rem;
-  color: #0066cc;
-  border-color: #0066cc;
+  color: $brand-teal;
+  border-color: $brand-teal;
 
   &:hover {
-    background-color: #0066cc;
+    background-color: $brand-teal;
     color: white;
   }
 }
