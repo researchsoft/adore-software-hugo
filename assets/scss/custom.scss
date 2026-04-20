@@ -5,6 +5,12 @@ $brand-teal: rgb(1, 95, 94);
 $brand-yellow: #f5c200;
 $font-stack: "Manrope", "Roboto", "Helvetica Neue", sans-serif;
 
+// Prevent the 100vw footer full-bleed from adding a horizontal scrollbar on
+// platforms where 100vw includes the scrollbar width (Windows, Linux).
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: $font-stack;
   font-size: 1.1rem;
