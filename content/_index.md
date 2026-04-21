@@ -13,16 +13,16 @@ sections:
       title:
       text: |
         <div class="home-hero">
-          <div class="home-hero-text">
-            <h1 class="home-hero-heading">Research software is a critical part of research</h1>
-            <p class="home-hero-body">The <a href="declaration/">Amsterdam Declaration on Funding Research Software Sustainability</a> is setting the future international agenda and comprehensively changing the way funders deal with research software.</p>
-            <div class="home-hero-cta-group">
-              <a href="/get-involved/" class="home-hero-btn-primary">GET INVOLVED</a>
-              <a href="/declaration/" class="home-hero-btn-secondary">Read the Declaration</a>
+          <div class="home-hero__text">
+            <h1 class="home-hero__heading">Research software is a critical part of research</h1>
+            <p class="home-hero__body">The <a href="declaration/">Amsterdam Declaration on Funding Research Software Sustainability</a> is setting the future international agenda and comprehensively changing the way funders deal with research software.</p>
+            <div class="home-hero__cta-group">
+              <a href="/get-involved/" class="home-hero__btn home-hero__btn--primary">GET INVOLVED</a>
+              <a href="/declaration/" class="home-hero__btn home-hero__btn--secondary">Read the Declaration</a>
             </div>
           </div>
-          <div class="home-hero-image-wrap">
-            <img src="/uploads/homepage-group.jpg" alt="Group discussing around a table" class="home-hero-image" />
+          <div class="home-hero__image-wrap">
+            <img src="/uploads/homepage-group.jpg" alt="Group discussing around a table" class="home-hero__image" />
           </div>
         </div>
 
@@ -61,8 +61,8 @@ sections:
       text: |
         {{< signatories-list >}}
 
-        <div class="home-view-all-wrap">
-          <a href="/signatories/" class="home-view-all-btn">View All Signatories</a>
+        <div class="home-signatories">
+          <a href="/signatories/" class="home-signatories__btn">View All Signatories</a>
         </div>
     design:
       spacing:
@@ -74,11 +74,11 @@ sections:
     content:
       title: ""
       text: |
-        <div class="home-cta-block">
-          <img src="/uploads/adore-logo-symbol.svg" alt="ADORE logo" class="home-cta-logo" />
-          <h3 class="home-cta-heading">Would you like to be involved in the adoption of the Declaration?</h3>
-          <p class="home-cta-subhead">Become a Signatory!</p>
-          <a href="/get-involved/" class="home-cta-btn">GET INVOLVED</a>
+        <div class="home-cta">
+          <img src="/uploads/adore-logo-symbol.svg" alt="ADORE logo" class="home-cta__logo" />
+          <h3 class="home-cta__heading">Would you like to be involved in the adoption of the Declaration?</h3>
+          <p class="home-cta__subhead">Become a Signatory!</p>
+          <a href="/get-involved/" class="home-cta__btn">GET INVOLVED</a>
         </div>
     design:
       spacing:

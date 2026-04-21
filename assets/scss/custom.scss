@@ -439,146 +439,148 @@ a {
 }
 
 // ── Homepage-specific layout classes ───────────────────────────────────────
-// Replace inline styles in content/_index.md so editors can change copy
-// without touching CSS.
+// BEM blocks scoped to the homepage. Nested with & so the full selector is
+// generated from a single block declaration — easier to maintain and rename.
 
 .home-hero {
   display: flex;
   align-items: center;
   gap: 3rem;
   flex-wrap: wrap;
-}
 
-.home-hero-text {
-  flex: 1;
-  min-width: 280px;
-}
+  &__text {
+    flex: 1;
+    min-width: 280px;
+  }
 
-.home-hero-heading {
-  color: white;
-  font-size: 2.8rem;
-  font-weight: bold;
-  margin-bottom: 1.5rem;
-  line-height: 1.2;
-}
-
-.home-hero-body {
-  color: white;
-  font-size: 1.25rem;
-  line-height: 1.6;
-  margin-bottom: 2.5rem;
-
-  a {
+  &__heading {
     color: white;
-    text-decoration: underline;
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
   }
-}
 
-.home-hero-cta-group {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  flex-wrap: wrap;
-}
+  &__body {
+    color: white;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
 
-.home-hero-btn-primary {
-  background-color: $brand-yellow;
-  color: $brand-teal;
-  padding: 14px 28px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+    a {
+      color: white;
+      text-decoration: underline;
+    }
+  }
 
-  &:hover {
-    background-color: darken($brand-yellow, 8%);
-    color: $brand-teal;
+  &__cta-group {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  &__btn {
+    font-size: 1.1rem;
+    font-weight: bold;
     text-decoration: none;
+
+    &--primary {
+      background-color: $brand-yellow;
+      color: $brand-teal;
+      padding: 14px 28px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+
+      &:hover {
+        background-color: darken($brand-yellow, 8%);
+        color: $brand-teal;
+        text-decoration: none;
+      }
+    }
+
+    &--secondary {
+      color: white;
+      text-decoration: underline;
+
+      &:hover {
+        color: rgba(255, 255, 255, 0.85);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__image-wrap {
+    flex: 1;
+    min-width: 280px;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
   }
 }
 
-.home-hero-btn-secondary {
-  color: white;
-  text-decoration: underline;
-  font-size: 1.1rem;
-
-  &:hover {
-    color: rgba(255, 255, 255, 0.85);
-    text-decoration: underline;
-  }
-}
-
-.home-hero-image-wrap {
-  flex: 1;
-  min-width: 280px;
-}
-
-.home-hero-image {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  display: block;
-}
-
-.home-view-all-wrap {
+.home-signatories {
   text-align: center;
   margin-top: 30px;
-}
 
-.home-view-all-btn {
-  background-color: $brand-teal;
-  color: white;
-  padding: 12px 25px;
-  border-radius: 6px;
-  text-decoration: none;
-  display: inline-block;
-  font-weight: bold;
-
-  &:hover {
-    background-color: darken($brand-teal, 8%);
+  &__btn {
+    background-color: $brand-teal;
     color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
     text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+
+    &:hover {
+      background-color: darken($brand-teal, 8%);
+      color: white;
+      text-decoration: none;
+    }
   }
 }
 
-.home-cta-block {
+.home-cta {
   text-align: center;
-}
 
-.home-cta-logo {
-  width: 80px;
-  height: 80px;
-  display: block;
-  margin: 0 auto 1.5rem;
-}
+  &__logo {
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin: 0 auto 1.5rem;
+  }
 
-.home-cta-heading {
-  color: $brand-teal;
-}
-
-.home-cta-subhead {
-  font-size: 1.2rem;
-  margin: 20px 0;
-  color: $brand-teal;
-}
-
-.home-cta-btn {
-  background-color: $brand-yellow;
-  color: $brand-teal;
-  padding: 15px 40px;
-  border-radius: 0;
-  text-decoration: none;
-  display: inline-block;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  margin: 20px 0;
-
-  &:hover {
-    background-color: darken($brand-yellow, 8%);
+  &__heading {
     color: $brand-teal;
+  }
+
+  &__subhead {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    color: $brand-teal;
+  }
+
+  &__btn {
+    background-color: $brand-yellow;
+    color: $brand-teal;
+    padding: 15px 40px;
+    border-radius: 0;
     text-decoration: none;
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin: 20px 0;
+
+    &:hover {
+      background-color: darken($brand-yellow, 8%);
+      color: $brand-teal;
+      text-decoration: none;
+    }
   }
 }
