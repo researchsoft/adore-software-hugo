@@ -7,6 +7,9 @@ tags:
   - podcast
   - community
 featured: false
+image:
+  filename: featured.jpg
+  preview_only: false
 ---
 
 Recently, Michelle Barker and Joris van Eijnatten spoke to Peter Schmidt on the latest episode of the [Code for Thought podcast](https://codeforthought.buzzsprout.com/) on funding sustainable research software. Michelle is the Director of the [Research Software Alliance](https://www.researchsoft.org/) (ReSA) and head of the Secretariat of the Amsterdam Declaration on Funding Research Software Sustainability (ADORE.software). Joris is General Director of the [Netherlands eScience Center](https://www.esciencecenter.nl/) and a member of the declaration draft team.

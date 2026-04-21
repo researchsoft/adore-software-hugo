@@ -10,6 +10,9 @@ tags:
   - Gothenburg
   - workshop
 featured: false
+image:
+  filename: featured.jpg
+  preview_only: false
 ---
 
 A combined meeting of the [Research Data Alliance (RDA) Funders Forum](https://www.rd-alliance.org/about-rda/organisational-bodies/rda-funders-forum) and the [Research Software Funders Forum](https://www.researchsoft.org/funders-forum/) took place on 20 March 2023, during the [RDA's 20th Plenary meeting](https://www.rd-alliance.org/rdas-20th-plenary-programme). The 50+ attendees discussed a range of topics, including the [Amsterdam Declaration on Funding Research Software Sustainability](https://adore.software/declaration/); approaches to funding research data and software and its infrastructure, including platforms and personnel; and other topics of mutual interest.
