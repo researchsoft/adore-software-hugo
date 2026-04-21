@@ -140,7 +140,7 @@ signatories:
   - name: "SciLifeLab"
     url: "https://www.scilifelab.se/"
     type: "Organisation"
-    logo: ""
+    logo: "uploads/signatories/scilifelab_logo.svg"
   - name: "Heidi Seibold"
     url: "https://heidiseibold.com/"
     type: "Person"
