@@ -2,8 +2,24 @@
 
 main:
   - name: 'About'
+    identifier: 'about'
     url: about
     weight: 10
+
+  - name: 'About ADORE.software'
+    parent: 'about'
+    url: about/about-adore
+    weight: 11
+
+  - name: 'Governance'
+    parent: 'about'
+    url: about/governance
+    weight: 12
+
+  - name: 'Process'
+    parent: 'about'
+    url: about/process
+    weight: 13
 
   - name: 'Declaration'
     url: declaration
