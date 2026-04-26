@@ -47,7 +47,7 @@ sections:
   - block: markdown
     id: news
     content:
-      title: Latest News
+      title: News
       text: |
         {{< news-featured slug="2024-09-declaration-open-for-signing" >}}
         {{< news-grid count="3" exclude="2024-09-declaration-open-for-signing" >}}
