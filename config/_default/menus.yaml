@@ -24,8 +24,3 @@ main:
   - name: 'Contact'
     url: contact
     weight: 60
-
-main_right:
-  - name: 'Get Involved'
-    url: get-involved
-    weight: 10
