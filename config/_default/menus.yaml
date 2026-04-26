@@ -21,6 +21,10 @@ main:
     url: news
     weight: 50
 
+  - name: 'Events'
+    url: events
+    weight: 55
+
   - name: 'Contact'
     url: contact
     weight: 60
