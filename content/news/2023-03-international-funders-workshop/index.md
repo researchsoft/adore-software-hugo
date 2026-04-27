@@ -1,6 +1,7 @@
 ---
 title: "International Funders Workshop: The Future of Research Software"
 date: 2023-03-09
+slug: international-funders-workshop-the-future-of-research-software
 categories:
   - News
   - Events

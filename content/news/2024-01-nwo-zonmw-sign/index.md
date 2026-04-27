@@ -1,6 +1,7 @@
 ---
 title: "ZonMw and NWO commit to sustainable research software"
 date: 2024-01-24
+slug: nwo-zonmw-sign
 categories:
   - News
   - Signatories
