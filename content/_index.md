@@ -16,9 +16,9 @@ sections:
           <div style="flex: 1; min-width: 280px;">
             <h1 style="color: white; font-size: 2.8rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;">Research software is a critical part of research</h1>
             <p style="color: white; font-size: 1.25rem; line-height: 1.6; margin-bottom: 2.5rem;">The <a href="declaration/" style="color: white; text-decoration: underline;">Amsterdam Declaration on Funding Research Software Sustainability</a> is setting the future international agenda and comprehensively changing the way funders deal with research software.</p>
-            <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+            <div style="display: flex; gap: 24px; flex-wrap: wrap; align-items: center;">
               <a href="/get-involved/" style="background-color: #f5c200; color: rgb(1, 95, 94); padding: 14px 28px; border-radius: 6px; text-decoration: none; font-size: 1.1rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.04em;">GET INVOLVED</a>
-              <a href="/declaration/" style="background-color: white; color: rgb(1, 95, 94); padding: 14px 28px; border-radius: 6px; text-decoration: none; font-size: 1.1rem; font-weight: bold;">Read the Declaration</a>
+              <a href="/declaration/" style="color: white; text-decoration: underline; font-size: 1.1rem;">Read the Declaration</a>
             </div>
           </div>
           <div style="flex: 1; min-width: 280px;">
