@@ -670,7 +670,15 @@ $btn-get-involved-text-transform:  uppercase;
   padding: 4rem 2rem;
 }
 
->>>>>>> e4b2f04 (Add full-bleed colored band behind Get Involved CTA (#80))
+// The Hugo Blox single-page layout wraps content in `.article-style` which
+// has `overflow: hidden` (mainly for floated images). That clips the band's
+// full-bleed escape on /signatories/, /news/, /about/governance/, etc.
+// Allow the overflow to escape only when an article actually contains the
+// CTA band, leaving the default clipping in place for every other page.
+.article-style:has(.home-cta-band) {
+  overflow: visible;
+}
+
 .home-cta {
   text-align: center;
   max-width: 1140px;
