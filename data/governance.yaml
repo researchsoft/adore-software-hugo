@@ -1,0 +1,35 @@
+---
+# Governance roster for /about/governance/.
+# Each section has a heading and a list of members.
+# Photos live in static/uploads/governance/.
+sections:
+  - id: secretariat
+    title: Secretariat
+    members:
+      - name: Michelle Barker
+        role: Director, Research Software Alliance
+        affiliation: Global
+        photo: uploads/governance/michelle_barker-200x200.jpg
+      - name: Carlos Martinez Ortiz
+        role: Scientific Community Manager
+        affiliation: Netherlands eScience Center, The Netherlands
+        photo: uploads/governance/carlos_martinez-200x200.jpg
+  - id: drafting-team
+    title: Drafting team
+    members:
+      - name: Michelle Barker
+        role: Director, Research Software Alliance
+        affiliation: Global
+        photo: uploads/governance/michelle_barker-200x200.jpg
+      - name: Neil Chue Hong
+        role: Director, Software Sustainability Institute
+        affiliation: UK
+        photo: uploads/governance/neil_chue_hong-200x200.jpg
+      - name: Daniel S. Katz
+        role: Chief Scientist, NCSA
+        affiliation: University of Illinois Urbana Champaign, USA
+        photo: uploads/governance/daniel_s_katz-200x200.jpg
+      - name: Joris van Eijnatten
+        role: General Director
+        affiliation: Netherlands eScience Center, The Netherlands
+        photo: uploads/governance/j_van_eijnatten-200x200.jpg

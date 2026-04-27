@@ -74,12 +74,7 @@ sections:
     content:
       title: ""
       text: |
-        <div class="home-cta">
-          <img src="/uploads/adore-logo-symbol.svg" alt="ADORE logo" class="home-cta__logo" />
-          <h3 class="home-cta__heading">Would you like to be involved in the adoption of the Declaration?</h3>
-          <p class="home-cta__subhead">Become a Signatory!</p>
-          <a href="/get-involved/" class="btn-get-involved">Get Involved</a>
-        </div>
+        {{< adore-cta >}}
     design:
       spacing:
         padding: ["4rem", "2rem"]

@@ -8,10 +8,4 @@ The following organisations and individuals have already signed up. If you would
 
 {{< signatories-list >}}
 
----
-
-### Would you like to be involved in the adoption of the Declaration?
-
-Become a Signatory!
-
-<a href="/get-involved/" class="btn-get-involved">Get Involved</a>
+{{< adore-cta >}}

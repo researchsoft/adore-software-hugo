@@ -64,3 +64,5 @@ The following is the proposed timeline for the adoption of the Declaration:
     </li>
   </ol>
 </div>
+
+{{< adore-cta >}}

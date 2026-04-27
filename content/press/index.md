@@ -7,3 +7,5 @@ type: page
 ## Press
 
 A press kit will be available at a later stage.
+
+{{< adore-cta >}}
