@@ -4,6 +4,8 @@ date: 2024-01-01
 type: page
 ---
 
+{{< recommendations >}}
+
 The Declaration text is available in full on Zenodo:
 
 [View full text on Zenodo](https://doi.org/10.5281/zenodo.13735888) &nbsp; [Download as PDF](https://zenodo.org/records/13735888/files/Amsterdam%20Declaration%20on%20Funding%20Research%20Software%20Sustainability%20version%201.1.pdf)
@@ -27,3 +29,5 @@ The following organisations and individuals have already signed up. If you would
 <a href="/get-involved/" class="btn-get-involved">Get Involved</a>
 
 {{< signatories-list >}}
+
+{{< adore-cta >}}
