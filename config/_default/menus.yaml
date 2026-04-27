@@ -22,8 +22,24 @@ main:
     weight: 50
 
   - name: 'Events'
-    url: events
+    identifier: 'events'
+    url: '#'
     weight: 55
+
+  - name: 'Funders Workshop 2024'
+    parent: 'events'
+    url: 2024-international-research-software-funders-workshop
+    weight: 56
+
+  - name: 'Funders Workshop 2023'
+    parent: 'events'
+    url: international-research-software-funders-workshop
+    weight: 57
+
+  - name: 'Funders Workshop 2022'
+    parent: 'events'
+    url: news/2023-03-international-funders-workshop
+    weight: 58
 
   - name: 'Contact'
     url: contact
