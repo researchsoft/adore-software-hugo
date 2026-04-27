@@ -375,6 +375,16 @@ $btn-get-involved-text-transform:  uppercase;
 }
 .news-grid {
   margin-top: 1.5rem;
+  margin-left: 0;
+  margin-right: 0;
+  row-gap: 24px;
+  column-gap: 24px;
+
+  > .col,
+  > [class*="col-"] {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .news-card {
