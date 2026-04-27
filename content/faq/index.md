@@ -37,3 +37,5 @@ Initially, the ADORE.software stewardship group is the same as the [ReSA Steerin
 ### Who has expressed interest in becoming a signatory?
 
 Between March 2023 and August 2023 we collected feedback from potential signatories and other stakeholders. Those that expressed their interest in signing or supporting ADORE.software and are listed on the website.
+
+{{< adore-cta >}}
