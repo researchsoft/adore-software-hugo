@@ -1,0 +1,23 @@
+{{/* Hugo Blox: Markdown — local override.
+     Identical to the upstream `blox-bootstrap/v5` partial, except the
+     content is rendered with `display: "block"` so single-line markdown
+     gets wrapped in <p> tags. The upstream default of `display: "inline"`
+     emits raw text inside .col-12, which prevented our `p a` body-link
+     underline rule from matching.
+*/}}
+
+{{/* Initialise */}}
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $columns := $block.design.columns | default "1" }}
+{{ $text := $block.content.text | emojify | $page.RenderString (dict "display" "block") }}
+
+{{ if ne $columns "1" }}
+  <div class="col-12 col-lg-8">
+    {{ $text }}
+  </div>
+{{ else }}
+  <div class="col-12">
+    {{ $text }}
+  </div>
+{{ end }}

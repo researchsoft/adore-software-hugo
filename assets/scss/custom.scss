@@ -839,7 +839,17 @@ $btn-get-involved-text-transform:  uppercase;
   }
 }
 
-// Body prose links inside homepage markdown blocks
-.home-section.wg-markdown p a {
+// Body prose links — underline anchors inside <p> across the whole site.
+// The Blox theme's `.article-style a { text-decoration: inherit }` was
+// suppressing underlines on regular content pages (governance, process,
+// declaration, news posts) because the inherited value resolves to none.
+// Scoping to `p a:not(...)` raises specificity above `.article-style a`
+// and catches body prose without touching nav/cards/buttons (which aren't
+// inside <p> tags). Exclusions:
+//   - `.btn` / `.btn-get-involved`: button anchors that happen to sit in <p>
+//   - `[href="/get-involved/"]`: bare CTAs that appear as <p><a>...</a></p>
+//     on a few content pages (process, governance, etc.) — those should
+//     render as buttons, not underlined links.
+p a:not(.btn):not(.btn-get-involved):not([href="/get-involved/"]) {
   text-decoration: underline;
 }
