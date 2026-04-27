@@ -72,6 +72,15 @@ a {
   text-align: center;
 }
 
+// Centre the H1 page header on regular content pages (signatories, faq,
+// governance, declaration, etc.). The Hugo Blox layout renders the page
+// title inside `.article-container.pt-3`. News posts share the same wrapper
+// but include `.article-categories` inside that block, so the `:has()`
+// guard excludes them so news/news-post layouts are unaffected (#75).
+.article-container.pt-3:not(:has(.article-categories)) > h1 {
+  text-align: center;
+}
+
 // Standard Bootstrap container width
 @media (min-width: 1200px) {
   .container {
