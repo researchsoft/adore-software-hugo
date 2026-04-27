@@ -833,7 +833,14 @@ $btn-get-involved-text-transform:  uppercase;
   }
 }
 
-// ── Declaration page section gap ───────────────────────────────────────────
+// ── Declaration page ───────────────────────────────────
+// Adds breathing room around the signatories grid embedded on /declaration/.
+// Scoped to .declaration-signatories-spacing so it does not affect the grid
+// when it appears on /signatories/ itself.
+.declaration-signatories-spacing {
+  padding: 100px 0;
+}
+
 // Replaces the previous markdown HR above the "Who can sign?" heading on
 // /declaration/ with generous vertical breathing room. Adds matching bottom
 // padding so the signatories grid sits comfortably away from the page edge.

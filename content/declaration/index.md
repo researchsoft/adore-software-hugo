@@ -28,7 +28,11 @@ The following organisations and individuals have already signed up. If you would
 
 <a href="/get-involved/" class="btn-get-involved">Get Involved</a>
 
+<section class="declaration-signatories-spacing">
+
 {{< signatories-list >}}
+
+</section>
 
 </div>
 
