@@ -42,4 +42,4 @@ Signatories demonstrate progress on a regular basis, with a contact moment five 
 
 Become a Signatory!
 
-[GET INVOLVED](/get-involved/)
+<a href="/get-involved/" class="btn-get-involved">Get Involved</a>

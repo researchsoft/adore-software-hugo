@@ -20,4 +20,4 @@ Research software may or may not be open-source software, while not all open-sou
 
 Become a Signatory!
 
-[GET INVOLVED](/get-involved/)
+<a href="/get-involved/" class="btn-get-involved">Get Involved</a>

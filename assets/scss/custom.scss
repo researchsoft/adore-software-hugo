@@ -89,7 +89,46 @@ a {
 }
 
 // ── Get Involved CTA button ─────────────────────────────────────────────────
-// Targets the nav link by its href — works in all navbar states
+// Single source of truth for every "Get Involved" button — homepage hero,
+// homepage footer CTA, and the inline call-outs on about/governance/process/
+// declaration/signatories pages. Edit the variables below to restyle them all
+// at once. In content, use:
+//   <a href="/get-involved/" class="btn-get-involved">Get Involved</a>
+$btn-get-involved-bg:              $brand-yellow;
+$btn-get-involved-color:           $brand-teal;
+$btn-get-involved-hover-bg:        darken($brand-yellow, 8%);
+$btn-get-involved-padding-y:       12px;
+$btn-get-involved-padding-x:       28px;
+$btn-get-involved-font-size:       1.05rem;
+$btn-get-involved-font-weight:     700;
+$btn-get-involved-radius:          0;
+$btn-get-involved-letter-spacing:  0.04em;
+$btn-get-involved-text-transform:  uppercase;
+
+.btn-get-involved {
+  display: inline-block;
+  background-color: $btn-get-involved-bg;
+  color: $btn-get-involved-color;
+  padding: $btn-get-involved-padding-y $btn-get-involved-padding-x;
+  font-size: $btn-get-involved-font-size;
+  font-weight: $btn-get-involved-font-weight;
+  border-radius: $btn-get-involved-radius;
+  letter-spacing: $btn-get-involved-letter-spacing;
+  text-transform: $btn-get-involved-text-transform;
+  text-decoration: none;
+  line-height: 1.4;
+  border: 0;
+
+  &:hover,
+  &:focus {
+    background-color: $btn-get-involved-hover-bg;
+    color: $btn-get-involved-color;
+    text-decoration: none;
+  }
+}
+
+// Legacy navbar rule — the "Get Involved" item was removed from the nav in
+// #43, but keep this in place in case it returns or appears elsewhere.
 .nav-item a[href="/get-involved"],
 .nav-item a[href="/get-involved/"].nav-link {
   background-color: $brand-yellow !important;
@@ -500,25 +539,13 @@ a {
     flex-wrap: wrap;
   }
 
+  // Secondary "Read the Declaration" link — kept inline in the hero next to
+  // the unified .btn-get-involved button. Primary variant was removed in
+  // favour of the shared .btn-get-involved class.
   &__btn {
     font-size: 1.1rem;
     font-weight: bold;
     text-decoration: none;
-
-    &--primary {
-      background-color: $brand-yellow;
-      color: $brand-teal;
-      padding: 14px 28px;
-      border-radius: 6px;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-
-      &:hover {
-        background-color: darken($brand-yellow, 8%);
-        color: $brand-teal;
-        text-decoration: none;
-      }
-    }
 
     &--secondary {
       color: white;
@@ -583,24 +610,5 @@ a {
     font-size: 1.2rem;
     margin: 20px 0;
     color: $brand-teal;
-  }
-
-  &__btn {
-    background-color: $brand-yellow;
-    color: $brand-teal;
-    padding: 15px 40px;
-    border-radius: 0;
-    text-decoration: none;
-    display: inline-block;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    margin: 20px 0;
-
-    &:hover {
-      background-color: darken($brand-yellow, 8%);
-      color: $brand-teal;
-      text-decoration: none;
-    }
   }
 }

@@ -17,7 +17,7 @@ sections:
             <h1 class="home-hero__heading">Research software is a critical part of research</h1>
             <p class="home-hero__body">The <a href="declaration/">Amsterdam Declaration on Funding Research Software Sustainability</a> is setting the future international agenda and comprehensively changing the way funders deal with research software.</p>
             <div class="home-hero__cta-group">
-              <a href="/get-involved/" class="home-hero__btn home-hero__btn--primary">GET INVOLVED</a>
+              <a href="/get-involved/" class="btn-get-involved">Get Involved</a>
               <a href="/declaration/" class="home-hero__btn home-hero__btn--secondary">Read the Declaration</a>
             </div>
           </div>
@@ -78,7 +78,7 @@ sections:
           <img src="/uploads/adore-logo-symbol.svg" alt="ADORE logo" class="home-cta__logo" />
           <h3 class="home-cta__heading">Would you like to be involved in the adoption of the Declaration?</h3>
           <p class="home-cta__subhead">Become a Signatory!</p>
-          <a href="/get-involved/" class="home-cta__btn">GET INVOLVED</a>
+          <a href="/get-involved/" class="btn-get-involved">Get Involved</a>
         </div>
     design:
       spacing:
