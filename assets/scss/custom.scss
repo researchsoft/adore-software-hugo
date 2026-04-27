@@ -836,11 +836,14 @@ $btn-get-involved-text-transform:  uppercase;
 // (newsletter, contact form) with paragraph links, so both contexts must be
 // covered. Exclusions:
 //   - `.btn` / `.btn-get-involved`: button anchors that happen to sit in <p>
-//   - `[href="/get-involved/"]`: bare CTAs that appear as <p><a>...</a></p>
-//     on a few content pages (process, governance, etc.) — those should
-//     render as buttons, not underlined links.
-p a:not(.btn):not(.btn-get-involved):not([href="/get-involved/"]),
-.article-style li a:not(.btn):not(.btn-get-involved):not([href="/get-involved/"]) {
+//     (the Get Involved CTA shortcode renders as <p><a class="btn-get-involved">),
+//     which should remain styled as a button rather than an underlined link.
+//     The previous `:not([href="/get-involved/"])` exclusion was redundant
+//     (every Get Involved CTA already carries .btn-get-involved) and was
+//     over-matching legitimate prose links to /get-involved/, so it has been
+//     dropped — see #77.
+p a:not(.btn):not(.btn-get-involved),
+.article-style li a:not(.btn):not(.btn-get-involved) {
   text-decoration: underline;
 }
 
