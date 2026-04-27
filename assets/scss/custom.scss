@@ -643,27 +643,6 @@ $btn-get-involved-text-transform:  uppercase;
   }
 }
 
-.home-signatories {
-  text-align: center;
-  margin-top: 30px;
-
-  &__btn {
-    background-color: $brand-teal;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 6px;
-    text-decoration: none;
-    display: inline-block;
-    font-weight: bold;
-
-    &:hover {
-      background-color: darken($brand-teal, 8%);
-      color: white;
-      text-decoration: none;
-    }
-  }
-}
-
 .home-cta {
   text-align: center;
 
