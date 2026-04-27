@@ -10,6 +10,8 @@ tags:
 featured: true
 image:
   filename: featured.png
+  caption: "Credit: Daniel S. Katz [https://doi.org/10.5281/zenodo.7295422]"
+  alt_text: "Map RSE organisations"
   preview_only: false
 ---
 

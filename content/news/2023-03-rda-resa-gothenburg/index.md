@@ -12,6 +12,8 @@ tags:
 featured: false
 image:
   filename: featured.jpg
+  caption: "Credit: [Erik of Gothenburg](https://en.wikipedia.org/wiki/User:Erik031), CC BY-SA 3.0, via Wikimedia Commons"
+  alt_text: "Gothenburg, Sweden, viewed from the Älvsborg Bridge"
   preview_only: false
 ---
 

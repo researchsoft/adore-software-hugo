@@ -11,6 +11,7 @@ tags:
 featured: true
 image:
   filename: featured.jpg
+  alt_text: "Montreal skyline photo by Matthias Mullie - Unsplash"
   preview_only: false
 ---
 

@@ -11,6 +11,8 @@ tags:
 featured: true
 image:
   filename: featured.jpg
+  caption: "International Research Software Funders Workshop"
+  alt_text: "Photo from International Research Software Funders Workshop"
   preview_only: false
 ---
 

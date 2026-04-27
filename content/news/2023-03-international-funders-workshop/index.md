@@ -11,6 +11,8 @@ tags:
 featured: false
 image:
   filename: featured.jpg
+  caption: "Credit: Annelies Verhelst [https://anneliesverhelst.com/]"
+  alt_text: "People during a meeting in an open office space"
   preview_only: false
 ---
 

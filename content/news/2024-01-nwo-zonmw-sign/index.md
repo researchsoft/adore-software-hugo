@@ -12,6 +12,8 @@ tags:
 featured: true
 image:
   filename: featured.jpg
+  caption: "Credit: SeventyFour, via [Shutterstock](https://www.shutterstock.com/image-photo/overview-hands-young-businesswoman-student-typing-2122757807)"
+  alt_text: "Hands of young businesswoman or student typing on laptop keyboard"
   preview_only: false
 ---
 

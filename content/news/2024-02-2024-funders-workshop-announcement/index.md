@@ -11,6 +11,7 @@ tags:
 featured: true
 image:
   filename: featured.jpg
+  alt_text: "Uppsala Cathedral by Aerial Photography"
   preview_only: false
 ---
 

@@ -12,6 +12,8 @@ tags:
 featured: true
 image:
   filename: featured.jpg
+  caption: "Inside the Main University Building in Uppsala"
+  alt_text: "Photo courtesy David Naylor, Uppsala University"
   preview_only: false
 ---
 
