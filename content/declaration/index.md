@@ -24,6 +24,6 @@ The Declaration can be signed by individuals and organisations that support rese
 
 The following organisations and individuals have already signed up. If you would like your organisation to be listed here, see how to get involved.
 
-[GET INVOLVED](/get-involved/)
+<a href="/get-involved/" class="btn-get-involved">Get Involved</a>
 
 {{< signatories-list >}}

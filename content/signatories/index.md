@@ -14,4 +14,4 @@ The following organisations and individuals have already signed up. If you would
 
 Become a Signatory!
 
-[GET INVOLVED](/get-involved/)
+<a href="/get-involved/" class="btn-get-involved">Get Involved</a>

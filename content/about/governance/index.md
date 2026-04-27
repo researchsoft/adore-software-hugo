@@ -40,4 +40,4 @@ Initially, the ADORE.software stewardship group is the same as the [ReSA Steerin
 
 Become a Signatory!
 
-[GET INVOLVED](/get-involved/)
+<a href="/get-involved/" class="btn-get-involved">Get Involved</a>
