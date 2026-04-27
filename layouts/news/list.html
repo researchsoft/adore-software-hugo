@@ -3,10 +3,6 @@
 {{ partial "page_header.html" . }}
 
 <div class="universal-wrapper">
-  {{ with .Content }}
-    <div class="article-style">{{ . }}</div>
-  {{ end }}
-
   {{ $paginator := .Paginate .Pages }}
 
   <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 news-grid">
@@ -52,6 +48,10 @@
   </div>
 
   {{ partial "pagination" . }}
+
+  {{ with .Content }}
+    <div class="article-style">{{ . }}</div>
+  {{ end }}
 </div>
 
 {{- end -}}
