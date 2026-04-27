@@ -373,6 +373,14 @@ $btn-get-involved-text-transform:  uppercase;
     color: darken($brand-teal, 10%);
   }
 }
+// Widen the /news/ list page so the 3-column card grid has more breathing
+// room. Scoped to .news-list-wide (added on the wrapper in
+// layouts/news/list.html) so other .universal-wrapper pages keep their
+// default narrower width.
+.universal-wrapper.news-list-wide {
+  max-width: 1200px;
+}
+
 .news-grid {
   margin-top: 1.5rem;
 }

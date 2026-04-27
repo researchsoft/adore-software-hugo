@@ -2,7 +2,7 @@
 
 {{ partial "page_header.html" . }}
 
-<div class="universal-wrapper">
+<div class="universal-wrapper news-list-wide">
   {{/* Featured post: full-width card on top, matching the homepage's news-featured shortcode. */}}
   {{ $featuredSlug := "2024-09-declaration-open-for-signing" }}
   {{ $featured := site.GetPage (printf "/news/%s" $featuredSlug) }}
