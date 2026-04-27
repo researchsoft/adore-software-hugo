@@ -824,6 +824,91 @@ $btn-get-involved-text-transform:  uppercase;
   }
 }
 
+// ── Declaration page: Recommendations accordion ───────────────────────────
+// Collapsible panels for the four recommendation categories on /declaration/.
+// Bootstrap 4 collapse drives the show/hide; visuals are scoped under
+// .recommendations to avoid bleeding into other pages. Categories are
+// independent (no `data-parent`), so users can open multiple at once.
+.recommendations {
+  margin: 1.5rem 0 2.5rem;
+
+  &__heading {
+    margin-bottom: 1rem;
+    color: $brand-teal;
+  }
+
+  &__list {
+    border-top: 1px solid rgba($brand-teal, 0.25);
+  }
+
+  &__panel {
+    border-bottom: 1px solid rgba($brand-teal, 0.25);
+  }
+
+  &__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem 0.25rem;
+    background: transparent;
+    border: 0;
+    color: $brand-teal;
+    font-family: $font-stack;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: left;
+    cursor: pointer;
+    line-height: 1.3;
+
+    &:hover,
+    &:focus {
+      color: darken($brand-teal, 10%);
+      outline: none;
+    }
+  }
+
+  &__panel-title {
+    flex: 1;
+  }
+
+  // Chevron rotates from down (collapsed) to up (expanded). Drawn with a
+  // CSS border so we don't depend on any icon font being available.
+  &__chevron {
+    flex: 0 0 auto;
+    width: 0;
+    height: 0;
+    margin-left: 1rem;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 8px solid $brand-teal;
+    transition: transform 0.2s ease;
+  }
+
+  &__toggle:not(.collapsed) &__chevron {
+    transform: rotate(180deg);
+  }
+
+  &__body {
+    padding: 0 0.25rem 0.5rem;
+  }
+
+  &__items {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  &__item {
+    padding: 0.5rem 0;
+    line-height: 1.55;
+
+    & + & {
+      border-top: 1px dashed rgba($brand-teal, 0.18);
+    }
+  }
+}
+
 // Body prose links — underline anchors inside <p> and <li> within rendered
 // markdown content (`.article-style`). The Blox theme's
 // `.article-style a { text-decoration: inherit }` was suppressing underlines
