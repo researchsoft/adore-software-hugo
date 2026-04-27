@@ -13,6 +13,7 @@ tags:
 featured: true
 image:
   filename: featured.jpg
+  alt_text: "Funders workshop group photo"
   preview_only: false
 ---
 

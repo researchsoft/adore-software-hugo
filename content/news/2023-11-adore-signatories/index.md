@@ -11,6 +11,8 @@ tags:
 featured: true
 image:
   filename: featured.png
+  caption: "International Research Software Funders Workshop"
+  alt_text: "Group of people participating in the development of Amsterdam Declaration on Funding Research Software Sustainability (ADORE.software)."
   preview_only: false
 ---
 

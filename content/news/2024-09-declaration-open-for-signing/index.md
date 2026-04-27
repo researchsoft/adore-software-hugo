@@ -15,6 +15,8 @@ tags:
 featured: true
 image:
   filename: featured.jpg
+  caption: "Credit: PeopleImages.com – Yuri A, via [Shutterstock](https://www.shutterstock.com/image-photo/hands-signature-writing-on-contract-deal-2460677957)"
+  alt_text: "Signing"
   preview_only: false
 ---
 

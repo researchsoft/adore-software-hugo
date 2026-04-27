@@ -13,6 +13,8 @@ tags:
 featured: true
 image:
   filename: featured.jpg
+  caption: "Credit: Prostock Studio, via [Shutterstock](https://www.shutterstock.com/image-photo/contract-signing-female-customer-sign-papers-2007818042)"
+  alt_text: "Signing"
   preview_only: false
 ---
 
