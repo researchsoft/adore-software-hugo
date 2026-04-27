@@ -21,6 +21,11 @@ main:
     url: about/process
     weight: 13
 
+  - name: 'FAQ'
+    parent: 'about'
+    url: faq
+    weight: 14
+
   - name: 'Declaration'
     url: declaration
     weight: 20
