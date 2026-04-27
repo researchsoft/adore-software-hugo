@@ -1,6 +1,7 @@
 ---
 title: "The Amsterdam Declaration on Funding Research Software Sustainability is now open for input from funders!"
 date: 2023-04-03
+slug: the-amsterdam-declaration-on-funding-research-software-sustainability-is-now-open-for-input-from-funders
 categories:
   - News
 tags:

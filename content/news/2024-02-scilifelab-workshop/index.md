@@ -1,6 +1,7 @@
 ---
 title: "SciLifeLab to co-organise international research software funders workshop as part of Open Science efforts in Sweden and beyond"
 date: 2024-02-22
+slug: scilifelab_co-organises_international_research_software_funders_workshop
 categories:
   - News
   - Events

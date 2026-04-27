@@ -1,6 +1,7 @@
 ---
 title: "Research Data Alliance and Research Software Funders Forum, Gothenburg, Sweden"
 date: 2023-03-09
+slug: rda-resa-funders-forum-gothenburg-sweden
 categories:
   - News
   - Events

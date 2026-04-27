@@ -1,6 +1,7 @@
 ---
 title: "International Research Software Funders Workshop 2024 – Building a Sustainable Future for Research Software"
 date: 2024-10-21
+slug: building-a-sustainable-future-for-research-software
 categories:
   - News
   - Events

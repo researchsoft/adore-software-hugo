@@ -1,6 +1,7 @@
 ---
 title: "Investing in People: Anticipating the Future of Research Software"
 date: 2023-10-25
+slug: investing-in-people-anticipating-the-future-of-research-software
 categories:
   - News
   - Events

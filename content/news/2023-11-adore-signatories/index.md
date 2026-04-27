@@ -1,6 +1,7 @@
 ---
 title: "ADORE.software signatories"
 date: 2023-11-22
+slug: adore-software-signatories
 categories:
   - News
   - Signatories

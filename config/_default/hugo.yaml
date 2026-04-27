@@ -32,6 +32,7 @@ ignoreFiles: [\.ipynb$, .ipynb_checkpoints$, \.Rmd$, \.Rmarkdown$, _cache$, ^tes
 refLinksErrorLevel: ERROR
 refLinksNotFoundURL: /404.html
 permalinks:
+  news: '/:year/:month/:slug/'
   authors: '/author/:slug/'
   tags: '/tag/:slug/'
   categories: '/category/:slug/'

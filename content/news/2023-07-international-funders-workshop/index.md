@@ -1,6 +1,7 @@
 ---
 title: "International Research Software Funders Workshop"
 date: 2023-07-10
+slug: international-research-software-funders-workshop
 categories:
   - News
   - Events

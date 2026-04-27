@@ -1,6 +1,7 @@
 ---
 title: "DFG signing of the \"Amsterdam Declaration on Funding Research Software Sustainability\""
 date: 2024-12-10
+slug: dfg-signs-the-amsterdam-declaration
 categories:
   - News
   - Signatories

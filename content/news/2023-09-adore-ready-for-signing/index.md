@@ -1,6 +1,7 @@
 ---
 title: "ADORE.software is ready for signing"
 date: 2023-09-13
+slug: adore-software-is-ready-for-signing
 categories:
   - News
   - Announcement
