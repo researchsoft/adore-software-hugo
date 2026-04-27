@@ -9,11 +9,16 @@ tags:
   - community
   - feedback
 featured: false
+image:
+  filename: featured.png
+  preview_only: false
 ---
 
 The next draft of the [Amsterdam Declaration on Funding Research Software Sustainability (ADORE.software)](https://adore.software/) was shared with funders at the aligned Research Data Alliance and Research Software Funders Forum meeting on March 20, 2023.
 
-At this presentation of the next draft of the Declaration, Daniel S. Katz, who is the Chief Scientist at the [NCSA, University of Illinois Urbana Champaign, USA](https://www.ncsa.illinois.edu/) and [Research Software Alliance (ReSA)](https://www.researchsoft.org/), talked about the content of the Declaration, including the recommendations, and next steps. You can read the draft [here](/declaration/).
+At this presentation of the next draft of the Declaration, Daniel S. Katz, who is the Chief Scientist at the [NCSA, University of Illinois Urbana Champaign, USA](https://www.ncsa.illinois.edu/) and [Research Software Alliance (ReSA)](https://www.researchsoft.org/), talked about the content of the Declaration, including the recommendations, and next steps. You can read the draft [here](/declaration/) and watch the presentation below.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WjmtaKSsNN8?si=tlVx0Lz_wBRicRW0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 As detailed by [Daniel S. Katz](https://danielskatz.org/), potential signatories of the Declaration could submit an Expression of Interest and provide feedback on this draft until April 14, 2023. Any stakeholder could also [subscribe](/newsletter/) to receive updates on the process and broader opportunities to provide feedback at a later stage.
 
