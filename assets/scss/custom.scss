@@ -612,3 +612,158 @@ $btn-get-involved-text-transform:  uppercase;
     color: $brand-teal;
   }
 }
+
+// ── Process page timeline ──────────────────────────────────────────────────
+// Vertical timeline used on /about/process/. Mirrors the Cool Timeline plugin
+// layout on the live WordPress site: brand-teal vertical line down the centre
+// (desktop) / left edge (mobile), date markers (dot or "?" for TBC entries),
+// dates on the left and content cards on the right.
+//
+// Scoped under .process-timeline; only used on this one page today. If reused
+// elsewhere, lift into its own partial / shortcode.
+.process-timeline {
+  --pt-line-width: 3px;
+  --pt-marker-size: 18px;
+
+  margin: 2rem 0 3rem;
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+    // Vertical accent line
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: var(--pt-line-width);
+      margin-left: calc(var(--pt-line-width) / -2);
+      background: linear-gradient(
+        to bottom,
+        rgba($brand-teal, 0) 0%,
+        $brand-teal 8%,
+        $brand-teal 92%,
+        rgba($brand-teal, 0) 100%
+      );
+
+      @media (max-width: 767px) {
+        left: 12px;
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: start;
+    gap: 0;
+    padding: 1.25rem 0;
+
+    @media (max-width: 767px) {
+      grid-template-columns: 36px 1fr;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__date {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: $brand-teal;
+    text-align: right;
+    padding-right: 2rem;
+    line-height: 1.1;
+    align-self: center;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  &__marker {
+    width: var(--pt-marker-size);
+    height: var(--pt-marker-size);
+    border-radius: 50%;
+    background: $brand-teal;
+    border: 3px solid $brand-teal;
+    box-shadow: 0 0 0 4px #ffffff;
+    align-self: center;
+    justify-self: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    line-height: 1;
+
+    &--tbc {
+      width: calc(var(--pt-marker-size) + 8px);
+      height: calc(var(--pt-marker-size) + 8px);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 767px) {
+      grid-column: 1;
+      grid-row: 1;
+      justify-self: start;
+      margin-left: 4px;
+      margin-top: 1.4rem;
+    }
+  }
+
+  &__card {
+    position: relative;
+    background: #ffffff;
+    border: 1px solid $brand-teal;
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    margin-left: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+
+    // Notch pointing back at the timeline
+    &::before {
+      content: "";
+      position: absolute;
+      top: 1.25rem;
+      left: -10px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 8px 10px 8px 0;
+      border-color: transparent $brand-teal transparent transparent;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: calc(1.25rem + 1px);
+      left: -8px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 7px 9px 7px 0;
+      border-color: transparent #ffffff transparent transparent;
+    }
+
+    @media (max-width: 767px) {
+      grid-column: 2;
+      grid-row: 1;
+      margin-left: 1rem;
+    }
+  }
+
+  &__title {
+    color: $brand-teal;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0 0 0.4rem;
+    line-height: 1.25;
+  }
+}
