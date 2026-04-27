@@ -853,3 +853,32 @@ $btn-get-involved-text-transform:  uppercase;
 p a:not(.btn):not(.btn-get-involved):not([href="/get-involved/"]) {
   text-decoration: underline;
 }
+
+// ── Toolkit page hero ──────────────────────────────────────────────────────
+// Two-column layout on /toolkit/: explanatory text on the left, the
+// ADORE.software Toolkit cover image on the right. Mirrors the layout used on
+// the live WordPress site. Falls back to a single column on narrow screens.
+.toolkit-hero {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+
+  &__text {
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__image {
+    text-align: center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: inline-block;
+    }
+
+    @media (max-width: 767px) {
+      margin-top: 1.5rem;
+    }
+  }
+}
