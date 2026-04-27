@@ -839,6 +839,14 @@ $btn-get-involved-text-transform:  uppercase;
   }
 }
 
+// ── Declaration page signatories spacing ───────────────────────────────────
+// Adds breathing room around the signatories grid embedded on /declaration/.
+// Scoped to .declaration-signatories-spacing so it does not affect the grid
+// when it appears on /signatories/ itself.
+.declaration-signatories-spacing {
+  padding: 100px 0;
+}
+
 // Body prose links — underline anchors inside <p> across the whole site.
 // The Blox theme's `.article-style a { text-decoration: inherit }` was
 // suppressing underlines on regular content pages (governance, process,
