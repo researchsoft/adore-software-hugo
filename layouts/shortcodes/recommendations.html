@@ -1,0 +1,60 @@
+{{/* recommendations shortcode
+   Renders the four collapsible Recommendations categories on /declaration/.
+   Content is taken verbatim from the live site (https://adore.software/declaration/).
+   Uses Bootstrap 4 collapse markup (data-toggle="collapse"), since the theme's
+   bundled vendor JS is Bootstrap 4.6.x. Categories are independent (not a
+   strict accordion) so multiple panels can be open at once.
+   Usage: {{< recommendations >}}
+*/}}
+
+<div class="recommendations" id="recommendations">
+  <h3 class="recommendations__heading">Recommendations</h3>
+
+  {{ $items := slice
+    (dict "id" "rec-practice" "title" "Research Software Practice" "items" (slice
+      (dict "n" "Recommendation 2" "text" "Funders should stimulate the documentation, licensing, open-source distribution, and accessibility of research software to enable the reproducibility of research outcomes.")
+      (dict "n" "Recommendation 4" "text" "Funders should incentivize the reuse and improvement of existing research software.")
+      (dict "n" "Recommendation 6" "text" "Funders should include research software in open science policies, following the principle &lsquo;as open as possible, as closed as necessary&rsquo;, to ensure it is a valuable and impactful research output.")
+    ))
+    (dict "id" "rec-ecosystem" "title" "Research Software Ecosystem" "items" (slice
+      (dict "n" "Recommendation 5" "text" "Funders should stimulate the development and maintenance of a research software ecosystem, including people, communities, and infrastructure, to ensure research software sustainability.")
+      (dict "n" "Recommendation 7" "text" "Funders should share information about their investments and work in a coordinated manner, as the research software ecosystem exceeds institutional and national boundaries.")
+      (dict "n" "Recommendation 9" "text" "Funders should ensure that funding instruments are fit for purpose for both sustainability and innovation, so that research software is both maintained and developed for the longer term, to encourage a healthy research software ecosystem.")
+    ))
+    (dict "id" "rec-personnel" "title" "Research Software Personnel" "items" (slice
+      (dict "n" "Recommendation 8" "text" "Funders should stimulate the training, hiring, and funding of both professional research and technical staff able to reuse, develop, and maintain sustainable research software.")
+      (dict "n" "Recommendation 10" "text" "Funders should facilitate appropriate reward and recognition measures that enable career progression for all people involved in the creation and maintenance of research software.")
+      (dict "n" "Recommendation 12" "text" "Funders should require citation practices for research software that recognise substantial contributors to all aspects of the software.")
+    ))
+    (dict "id" "rec-ethics" "title" "Research Software Ethics" "items" (slice
+      (dict "n" "Recommendation 11" "text" "Funders should encourage the responsible use of appropriate indicators to assess the degree of permanence, reusability, and impact of research software.")
+      (dict "n" "Recommendation 13" "text" "Funders should explicitly consider the environmental and social impact of the use of research software.")
+      (dict "n" "Recommendation 15" "text" "Funders should explicitly recognise that diversity, equity and inclusivity are significant factors in making research software sustainable.")
+    ))
+  }}
+
+  <div class="recommendations__list">
+    {{ range $items }}
+    <div class="recommendations__panel">
+      <button class="recommendations__toggle collapsed"
+              type="button"
+              data-toggle="collapse"
+              data-target="#{{ .id }}"
+              aria-expanded="false"
+              aria-controls="{{ .id }}">
+        <span class="recommendations__panel-title">{{ .title }}</span>
+        <span class="recommendations__chevron" aria-hidden="true"></span>
+      </button>
+      <div id="{{ .id }}" class="recommendations__body collapse">
+        <ul class="recommendations__items">
+          {{ range .items }}
+          <li class="recommendations__item">
+            <strong>{{ .n }}:</strong> &ldquo;{{ .text | safeHTML }}&rdquo;
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</div>
