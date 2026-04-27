@@ -13,3 +13,9 @@ There are several options for getting involved.
 [BECOME A SIGNATORY OF THE DECLARATION](https://adore.software/sign/)
 
 You can find out more details of what it means to be a Signatory in our [FAQ](/faq/) page.
+
+## Current Signatories
+
+{{< signatories-list >}}
+
+{{< adore-cta >}}
