@@ -36,9 +36,7 @@ sections:
     content:
       title: "Amsterdam Declaration on Funding Research Software Sustainability"
       text: |
-        The **Amsterdam Declaration on Funding Research Software Sustainability** (ADORE.software) aims to raise awareness of the role of funding practice in the sustainability of research software, and to improve that practice. The Declaration includes a limited number of recommendations and an accompanying [ADORE.software Toolkit](toolkit/).
-        
-        For the purposes of this Declaration, research software is defined as "all forms of software that were created during the research process or for a research purpose". A fuller description is included in the accompanying ADORE.software Toolkit.
+        The [Amsterdam Declaration on Funding Research Software Sustainability](/declaration) (ADORE.software) aim is to raise awareness of the role of funding practice in the sustainability of research software, and to improve that practice. The Declaration includes a limited number of recommendations and an accompanying [ADORE.software Toolkit](/toolkit/). For the purposes of this Declaration, research software is defined as "all forms of software that were created during the research process or for a research purpose". A fuller description is included in the accompanying [ADORE.software Toolkit](/toolkit/).
     design:
       spacing:
         padding: ["4rem", "2rem"]
