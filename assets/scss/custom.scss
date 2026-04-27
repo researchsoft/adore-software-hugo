@@ -515,6 +515,7 @@ $btn-get-involved-text-transform:  uppercase;
   align-items: center;
   justify-content: center;
   padding: 16px 16px 0;
+  text-align: center;
 }
 
 .governance-photo {
@@ -523,6 +524,7 @@ $btn-get-involved-text-transform:  uppercase;
   border-radius: 50%;
   object-fit: cover;
   display: block;
+  margin: 0 auto;
 }
 
 .governance-name {
