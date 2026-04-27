@@ -71,8 +71,6 @@ sections:
         {{< adore-cta >}}
     design:
       spacing:
-        padding: ["4rem", "2rem"]
-      background:
-        color: '#c5d0de'
+        padding: ["0", "0"]
 
 ---
