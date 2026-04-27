@@ -95,7 +95,7 @@ a {
 // at once. In content, use:
 //   <a href="/get-involved/" class="btn-get-involved">Get Involved</a>
 $btn-get-involved-bg:              $brand-yellow;
-$btn-get-involved-color:           $brand-teal;
+$btn-get-involved-color:           $brand-teal !important;
 $btn-get-involved-hover-bg:        darken($brand-yellow, 8%);
 $btn-get-involved-padding-y:       12px;
 $btn-get-involved-padding-x:       28px;

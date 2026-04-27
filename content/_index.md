@@ -17,7 +17,7 @@ sections:
             <h1 class="home-hero__heading">Research software is a critical part of research</h1>
             <p class="home-hero__body">The <a href="declaration/">Amsterdam Declaration on Funding Research Software Sustainability</a> is setting the future international agenda and comprehensively changing the way funders deal with research software.</p>
             <div class="home-hero__cta-group">
-              <a href="/get-involved/" class="btn-get-involved">Get Involved</a>
+              <a href="/get-involved/" class="btn btn-get-involved">Get Involved</a>
               <a href="/declaration/" class="home-hero__btn home-hero__btn--secondary">Read the Declaration</a>
             </div>
           </div>
