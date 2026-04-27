@@ -838,3 +838,8 @@ $btn-get-involved-text-transform:  uppercase;
     line-height: 1.25;
   }
 }
+
+// Body prose links inside homepage markdown blocks
+.home-section.wg-markdown p a {
+  text-decoration: underline;
+}
