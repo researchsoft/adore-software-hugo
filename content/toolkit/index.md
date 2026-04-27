@@ -8,3 +8,5 @@ The ADORE.software Toolkit aims to support implementation of the Amsterdam Decla
 
 [VIEW TOOLKIT](https://docs.google.com/document/d/16T1rbMvKVWVa-eGXAc6POdS_WXWxZUYD395w3R008lM/edit?usp=sharing)
 - [Research Software Alliance](https://www.researchsoft.org/)
+
+{{< adore-cta >}}

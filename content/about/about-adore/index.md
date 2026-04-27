@@ -16,8 +16,4 @@ For the purpose of this Declaration, research software is defined as: "Source co
 
 Research software may or may not be open-source software, while not all open-source software is research software. The reusability of research software is essential to its sustainability. Reusability ultimately depends on people, who need to have the skills to enable reusability and be incentivised to do so; infrastructures, which need to exist to support the discoverability of research software to facilitate reuse; and funding and policies, which are needed to encourage reuse.
 
-### Would you like to be involved in the adoption of the Declaration?
-
-Become a Signatory!
-
-<a href="/get-involved/" class="btn-get-involved">Get Involved</a>
+{{< adore-cta >}}
