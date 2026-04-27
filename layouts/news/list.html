@@ -48,7 +48,7 @@
   {{ end }}
   {{ $paginator := .Paginate $pages }}
 
-  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 news-grid">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5 news-grid">
     {{ range $paginator.Pages }}
     {{ $item := . }}
     {{ $link := $item.RelPermalink }}
