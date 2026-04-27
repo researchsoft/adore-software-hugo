@@ -64,9 +64,3 @@ The following is the proposed timeline for the adoption of the Declaration:
     </li>
   </ol>
 </div>
-
-### Would you like to be involved in the adoption of the Declaration?
-
-Become a Signatory!
-
-[GET INVOLVED](/get-involved/)
