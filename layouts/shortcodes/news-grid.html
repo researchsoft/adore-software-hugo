@@ -30,7 +30,7 @@
   <div class="col">
     <div class="news-card-minimal">
       {{ with $resource }}
-        {{ $image := .Fill (printf "600x400 %s" $anchor) }}
+        {{ $image := .Fill (printf "600x600 %s" $anchor) }}
         {{ if ne $image.MediaType.SubType "gif" }}{{ $image = $image.Process "webp" }}{{ end }}
         <a href="{{ $link }}">
           <img src="{{ $image.RelPermalink }}"

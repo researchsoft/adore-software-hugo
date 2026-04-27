@@ -4,6 +4,9 @@ date: 2024-10-17
 type: page
 ---
 
+![2024 International Research Software Funders Workshop group photo](/uploads/2024-irsfw/group-image.jpeg)
+Image credit: SciLifeLab
+
 ## 2024 International Research Software Funders Workshop
 
 ### Towards a monitoring framework to benchmark the ADORE.software recommendations and improve the sustainability of research software

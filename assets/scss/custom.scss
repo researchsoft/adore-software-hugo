@@ -329,7 +329,8 @@ $btn-get-involved-text-transform:  uppercase;
 .news-card-minimal {
   img {
     width: 100%;
-    height: 200px;
+    aspect-ratio: 1 / 1;
+    height: auto;
     object-fit: cover;
     display: block;
     border-radius: 6px;
@@ -368,10 +369,15 @@ $btn-get-involved-text-transform:  uppercase;
 }
 
 .news-card {
-  border: 1px solid #e0e0e0;
+  border: 0;
   border-radius: 8px;
   overflow: hidden;
   transition: box-shadow 0.2s ease;
+
+  &.card {
+    border: 0;
+    box-shadow: none;
+  }
 
   &:hover {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
@@ -642,27 +648,6 @@ $btn-get-involved-text-transform:  uppercase;
   }
 }
 
-.home-signatories {
-  text-align: center;
-  margin-top: 30px;
-
-  &__btn {
-    background-color: $brand-teal;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 6px;
-    text-decoration: none;
-    display: inline-block;
-    font-weight: bold;
-
-    &:hover {
-      background-color: darken($brand-teal, 8%);
-      color: white;
-      text-decoration: none;
-    }
-  }
-}
-
 .home-cta {
   text-align: center;
 
@@ -847,17 +832,136 @@ $btn-get-involved-text-transform:  uppercase;
   padding-top: 6rem;
 }
 
-// Body prose links — underline anchors inside <p> across the whole site.
-// The Blox theme's `.article-style a { text-decoration: inherit }` was
-// suppressing underlines on regular content pages (governance, process,
-// declaration, news posts) because the inherited value resolves to none.
-// Scoping to `p a:not(...)` raises specificity above `.article-style a`
-// and catches body prose without touching nav/cards/buttons (which aren't
-// inside <p> tags). Exclusions:
+// ── Declaration page: Recommendations accordion ───────────────────────────
+// Collapsible panels for the four recommendation categories on /declaration/.
+// Bootstrap 4 collapse drives the show/hide; visuals are scoped under
+// .recommendations to avoid bleeding into other pages. Categories are
+// independent (no `data-parent`), so users can open multiple at once.
+.recommendations {
+  margin: 1.5rem 0 2.5rem;
+
+  &__heading {
+    margin-bottom: 1rem;
+    color: $brand-teal;
+  }
+
+  &__list {
+    border-top: 1px solid rgba($brand-teal, 0.25);
+  }
+
+  &__panel {
+    border-bottom: 1px solid rgba($brand-teal, 0.25);
+  }
+
+  &__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem 0.25rem;
+    background: transparent;
+    border: 0;
+    color: $brand-teal;
+    font-family: $font-stack;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: left;
+    cursor: pointer;
+    line-height: 1.3;
+
+    &:hover,
+    &:focus {
+      color: darken($brand-teal, 10%);
+      outline: none;
+    }
+  }
+
+  &__panel-title {
+    flex: 1;
+  }
+
+  // Chevron rotates from down (collapsed) to up (expanded). Drawn with a
+  // CSS border so we don't depend on any icon font being available.
+  &__chevron {
+    flex: 0 0 auto;
+    width: 0;
+    height: 0;
+    margin-left: 1rem;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 8px solid $brand-teal;
+    transition: transform 0.2s ease;
+  }
+
+  &__toggle:not(.collapsed) &__chevron {
+    transform: rotate(180deg);
+  }
+
+  &__body {
+    padding: 0 0.25rem 0.5rem;
+  }
+
+  &__items {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  &__item {
+    padding: 0.5rem 0;
+    line-height: 1.55;
+
+    & + & {
+      border-top: 1px dashed rgba($brand-teal, 0.18);
+    }
+  }
+}
+
+// Body prose links — underline anchors inside <p> and <li> within rendered
+// markdown content (`.article-style`). The Blox theme's
+// `.article-style a { text-decoration: inherit }` was suppressing underlines
+// on regular content pages (governance, process, declaration, news posts)
+// because the inherited value resolves to none. Scoping to `p a` and
+// `.article-style li a` raises specificity above `.article-style a` while
+// keeping the rule confined to body prose — `<li>` items in the navbar and
+// footer are deliberately excluded by limiting the list-item rule to the
+// article-style wrapper. The /get-involved/ page mixes ordered-list links
+// (newsletter, contact form) with paragraph links, so both contexts must be
+// covered. Exclusions:
 //   - `.btn` / `.btn-get-involved`: button anchors that happen to sit in <p>
 //   - `[href="/get-involved/"]`: bare CTAs that appear as <p><a>...</a></p>
 //     on a few content pages (process, governance, etc.) — those should
 //     render as buttons, not underlined links.
-p a:not(.btn):not(.btn-get-involved):not([href="/get-involved/"]) {
+p a:not(.btn):not(.btn-get-involved):not([href="/get-involved/"]),
+.article-style li a:not(.btn):not(.btn-get-involved):not([href="/get-involved/"]) {
   text-decoration: underline;
+}
+
+// ── Toolkit page hero ──────────────────────────────────────────────────────
+// Two-column layout on /toolkit/: explanatory text on the left, the
+// ADORE.software Toolkit cover image on the right. Mirrors the layout used on
+// the live WordPress site. Falls back to a single column on narrow screens.
+.toolkit-hero {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+
+  &__text {
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__image {
+    text-align: center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: inline-block;
+    }
+
+    @media (max-width: 767px) {
+      margin-top: 1.5rem;
+    }
+  }
 }

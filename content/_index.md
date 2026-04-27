@@ -58,10 +58,6 @@ sections:
       title: "Signatories"
       text: |
         {{< signatories-list >}}
-
-        <div class="home-signatories">
-          <a href="/signatories/" class="home-signatories__btn">View All Signatories</a>
-        </div>
     design:
       spacing:
         padding: ["4rem", "2rem"]
