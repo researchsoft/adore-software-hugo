@@ -18,7 +18,7 @@
 
 <div class="row align-items-center news-featured mb-5">
   {{ with $resource }}
-    {{ $image := .Fill (printf "808x505 %s" $anchor) }}
+    {{ $image := .Fill (printf "808x808 %s" $anchor) }}
     {{ if ne $image.MediaType.SubType "gif" }}{{ $image = $image.Process "webp" }}{{ end }}
     <div class="col-12 col-md-6 mb-3 mb-md-0">
       <a href="{{ $link }}">

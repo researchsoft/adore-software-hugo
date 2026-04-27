@@ -31,3 +31,5 @@ The following organisations and individuals have already signed up. If you would
 {{< signatories-list >}}
 
 </section>
+
+{{< adore-cta >}}

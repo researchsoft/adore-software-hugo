@@ -329,7 +329,8 @@ $btn-get-involved-text-transform:  uppercase;
 .news-card-minimal {
   img {
     width: 100%;
-    height: 200px;
+    aspect-ratio: 1 / 1;
+    height: auto;
     object-fit: cover;
     display: block;
     border-radius: 6px;
@@ -642,27 +643,6 @@ $btn-get-involved-text-transform:  uppercase;
   }
 }
 
-.home-signatories {
-  text-align: center;
-  margin-top: 30px;
-
-  &__btn {
-    background-color: $brand-teal;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 6px;
-    text-decoration: none;
-    display: inline-block;
-    font-weight: bold;
-
-    &:hover {
-      background-color: darken($brand-teal, 8%);
-      color: white;
-      text-decoration: none;
-    }
-  }
-}
-
 .home-cta {
   text-align: center;
 
@@ -847,17 +827,22 @@ $btn-get-involved-text-transform:  uppercase;
   padding: 100px 0;
 }
 
-// Body prose links — underline anchors inside <p> across the whole site.
-// The Blox theme's `.article-style a { text-decoration: inherit }` was
-// suppressing underlines on regular content pages (governance, process,
-// declaration, news posts) because the inherited value resolves to none.
-// Scoping to `p a:not(...)` raises specificity above `.article-style a`
-// and catches body prose without touching nav/cards/buttons (which aren't
-// inside <p> tags). Exclusions:
+// Body prose links — underline anchors inside <p> and <li> within rendered
+// markdown content (`.article-style`). The Blox theme's
+// `.article-style a { text-decoration: inherit }` was suppressing underlines
+// on regular content pages (governance, process, declaration, news posts)
+// because the inherited value resolves to none. Scoping to `p a` and
+// `.article-style li a` raises specificity above `.article-style a` while
+// keeping the rule confined to body prose — `<li>` items in the navbar and
+// footer are deliberately excluded by limiting the list-item rule to the
+// article-style wrapper. The /get-involved/ page mixes ordered-list links
+// (newsletter, contact form) with paragraph links, so both contexts must be
+// covered. Exclusions:
 //   - `.btn` / `.btn-get-involved`: button anchors that happen to sit in <p>
 //   - `[href="/get-involved/"]`: bare CTAs that appear as <p><a>...</a></p>
 //     on a few content pages (process, governance, etc.) — those should
 //     render as buttons, not underlined links.
-p a:not(.btn):not(.btn-get-involved):not([href="/get-involved/"]) {
+p a:not(.btn):not(.btn-get-involved):not([href="/get-involved/"]),
+.article-style li a:not(.btn):not(.btn-get-involved):not([href="/get-involved/"]) {
   text-decoration: underline;
 }
