@@ -5,6 +5,7 @@ type: page
 ---
 
 ![2024 International Research Software Funders Workshop group photo](/uploads/2024-irsfw/group-image.jpeg)
+Image credit: SciLifeLab
 
 ## 2024 International Research Software Funders Workshop
 
