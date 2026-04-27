@@ -10,6 +10,12 @@ There are several options for getting involved.
 2. You can get in touch with us using the [contact form](/contact/) (or by sending us an [email](mailto:info@researchsoft.org)).
 3. If you want to publicly show your support for the Declaration:
 
-[BECOME A SIGNATORY OF THE DECLARATION](https://adore.software/sign/)
+<a href="/sign/" class="btn-get-involved">BECOME A SIGNATORY OF THE DECLARATION</a>
 
 You can find out more details of what it means to be a Signatory in our [FAQ](/faq/) page.
+
+## Current Signatories
+
+{{< signatories-list >}}
+
+{{< adore-cta >}}
