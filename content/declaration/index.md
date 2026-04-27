@@ -16,7 +16,7 @@ Research Software Alliance. (2024). Amsterdam Declaration on Funding Research So
 
 The Declaration is the product of the collective effort from many people, representing various organisations across the globe. You can find a list of contributing organisations and individuals in [this document](https://docs.google.com/document/d/16dDU3HV5agTyr5dib_fTkDj-9trOxo5We5yvSz6tXeE/edit?usp=sharing).
 
----
+<div class="declaration-section--gap">
 
 ### Who can sign?
 
@@ -27,3 +27,5 @@ The following organisations and individuals have already signed up. If you would
 <a href="/get-involved/" class="btn-get-involved">Get Involved</a>
 
 {{< signatories-list >}}
+
+</div>
