@@ -75,3 +75,5 @@ security:
   _merge: deep
 sitemap:
   _merge: deep
+ignoreLogs:
+  - 'unrecognized render hook'

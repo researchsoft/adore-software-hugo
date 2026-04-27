@@ -13,6 +13,9 @@ featured: false
 image:
   filename: featured.png
   preview_only: false
+_build:
+  list: never
+  render: always
 ---
 
 The next draft of the [Amsterdam Declaration on Funding Research Software Sustainability (ADORE.software)](https://adore.software/) was shared with funders at the aligned Research Data Alliance and Research Software Funders Forum meeting on March 20, 2023.
