@@ -4,6 +4,8 @@ date: 2024-01-01
 type: page
 ---
 
+{{< recommendations >}}
+
 The Declaration text is available in full on Zenodo:
 
 [View full text on Zenodo](https://doi.org/10.5281/zenodo.13735888) &nbsp; [Download as PDF](https://zenodo.org/records/13735888/files/Amsterdam%20Declaration%20on%20Funding%20Research%20Software%20Sustainability%20version%201.1.pdf)
@@ -16,7 +18,7 @@ Research Software Alliance. (2024). Amsterdam Declaration on Funding Research So
 
 The Declaration is the product of the collective effort from many people, representing various organisations across the globe. You can find a list of contributing organisations and individuals in [this document](https://docs.google.com/document/d/16dDU3HV5agTyr5dib_fTkDj-9trOxo5We5yvSz6tXeE/edit?usp=sharing).
 
----
+<div class="declaration-section--gap">
 
 ### Who can sign?
 
@@ -31,5 +33,7 @@ The following organisations and individuals have already signed up. If you would
 {{< signatories-list >}}
 
 </section>
+
+</div>
 
 {{< adore-cta >}}

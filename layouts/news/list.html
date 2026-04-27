@@ -3,7 +3,50 @@
 {{ partial "page_header.html" . }}
 
 <div class="universal-wrapper">
-  {{ $paginator := .Paginate .Pages }}
+  {{/* Featured post: full-width card on top, matching the homepage's news-featured shortcode. */}}
+  {{ $featuredSlug := "2024-09-declaration-open-for-signing" }}
+  {{ $featured := site.GetPage (printf "/news/%s" $featuredSlug) }}
+
+  {{ with $featured }}
+    {{ $link     := .RelPermalink }}
+    {{ $resource := partial "blox-core/functions/get_featured_image.html" . }}
+    {{ $anchor   := .Params.image.focal_point | default "Smart" }}
+
+    {{ $summary := "" }}
+    {{ if .Params.summary }}
+      {{ $summary = .Params.summary | markdownify | emojify }}
+    {{ else if .Summary }}
+      {{ $summary = .Summary }}
+    {{ end }}
+
+    <div class="row align-items-center news-featured mb-5">
+      {{ with $resource }}
+        {{ $image := .Fill (printf "808x505 %s" $anchor) }}
+        {{ if ne $image.MediaType.SubType "gif" }}{{ $image = $image.Process "webp" }}{{ end }}
+        <div class="col-12 col-md-6 mb-3 mb-md-0">
+          <a href="{{ $link }}">
+            <img src="{{ $image.RelPermalink }}"
+                 width="{{ $image.Width }}" height="{{ $image.Height }}"
+                 class="img-fluid rounded" alt="{{ $featured.Title }}" loading="lazy">
+          </a>
+        </div>
+      {{ end }}
+      <div class="col-12 col-md-6">
+        <h3><a href="{{ $link }}" style="text-decoration:none;">{{ .Title }}</a></h3>
+        {{ with $summary }}
+          <div class="news-featured-summary">{{ . }}</div>
+        {{ end }}
+        <a href="{{ $link }}" class="btn btn-sm btn-outline-primary mt-3 d-inline-block">Read more</a>
+      </div>
+    </div>
+  {{ end }}
+
+  {{/* Paginated grid of remaining posts, excluding the featured post above. */}}
+  {{ $pages := .Pages }}
+  {{ if $featured }}
+    {{ $pages = where $pages "File.ContentBaseName" "ne" $featuredSlug }}
+  {{ end }}
+  {{ $paginator := .Paginate $pages }}
 
   <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 news-grid">
     {{ range $paginator.Pages }}
