@@ -824,6 +824,14 @@ $btn-get-involved-text-transform:  uppercase;
   }
 }
 
+// ── Declaration page section gap ───────────────────────────────────────────
+// Replaces the previous markdown HR above the "Who can sign?" heading on
+// /declaration/ with generous vertical breathing room. Adds matching bottom
+// padding so the signatories grid sits comfortably away from the page edge.
+.declaration-section--gap {
+  padding-top: 6rem;
+}
+
 // ── Declaration page: Recommendations accordion ───────────────────────────
 // Collapsible panels for the four recommendation categories on /declaration/.
 // Bootstrap 4 collapse drives the show/hide; visuals are scoped under
