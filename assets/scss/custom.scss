@@ -369,10 +369,15 @@ $btn-get-involved-text-transform:  uppercase;
 }
 
 .news-card {
-  border: 1px solid #e0e0e0;
+  border: 0;
   border-radius: 8px;
   overflow: hidden;
   transition: box-shadow 0.2s ease;
+
+  &.card {
+    border: 0;
+    box-shadow: none;
+  }
 
   &:hover {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
