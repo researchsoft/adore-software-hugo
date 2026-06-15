@@ -7,8 +7,6 @@ type: page
 ![2024 International Research Software Funders Workshop group photo](/uploads/2024-irsfw/group-image.jpeg)
 Image credit: SciLifeLab
 
-## 2024 International Research Software Funders Workshop
-
 ### Towards a monitoring framework to benchmark the ADORE.software recommendations and improve the sustainability of research software
 
 The 2024 International Research Software Funders Workshop continued to progress the way funders sustain and support research software. The [SciLifeLab](https://www.scilifelab.se/) [Data Centre](https://www.scilifelab.se/data/) and the [Research Software Alliance](https://www.researchsoft.org/) (ReSA) co-hosted this hybrid event that took place from 11–13 September 2024 in Uppsala, Sweden. The workshop brought together more than 50 funders and experts in research software to discuss operationalising the [Amsterdam Declaration on Funding Research Software Sustainability](https://adore.software/) (ADORE.software). ADORE.software aims to raise awareness of the role of funding practice in the sustainability of research software, and to improve that practice.
