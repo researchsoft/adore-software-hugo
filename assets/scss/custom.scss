@@ -8,8 +8,25 @@ $font-stack: "Manrope", "Roboto", "Helvetica Neue", sans-serif;
 
 // Prevent the 100vw footer full-bleed from adding a horizontal scrollbar on
 // platforms where 100vw includes the scrollbar width (Windows, Linux).
+// NOTE: use `clip` rather than `hidden` here. `overflow-x: hidden` turns
+// <html> into a scroll container, which silently breaks `position: sticky`
+// on descendants (the theme's `.header--fixed` navbar wrapper). `clip`
+// suppresses the horizontal overflow the same way but does NOT establish a
+// scroll container, so the sticky navbar can pin to the viewport again (#124).
 html {
-  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+// The theme ALSO sets `body { overflow-x: hidden; overflow-y: auto }`, which
+// makes <body> its own scroll container and is the real reason the sticky
+// navbar still didn't pin (the page scrolls the viewport, but sticky resolved
+// against body's non-scrolling scrollport). Override both: clip horizontally
+// (keeps the footer full-bleed from adding a scrollbar, without a scroll
+// container) and let vertical overflow be visible so the viewport is the
+// scroller and `position: sticky` works (#124).
+body {
+  overflow-x: clip;
+  overflow-y: visible;
 }
 
 body {
@@ -1149,4 +1166,51 @@ body.page-faq {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
   }
+}
+
+// ── Sticky navbar (#124) ─────────────────────────────────────────────────────
+// Goal: the top navbar should pin to the top of the viewport and follow the
+// user as they scroll, while staying readable (white text/logo) once it leaves
+// the hero.
+//
+// Mechanism: the theme ALREADY wraps the navbar in
+//   <div class="page-header header--fixed"> … #navbar-main … </div>
+// and `.header--fixed` is `position: sticky; top: 0; z-index: 10` in the
+// theme's _nav.scss. So in principle the navbar was always meant to stick.
+// It didn't, because `html { overflow-x: hidden }` (added to suppress the
+// footer's 100vw full-bleed scrollbar) turned <html> into a scroll container,
+// which neutralises `position: sticky` on every descendant. That was changed
+// to `overflow-x: clip` at the top of this file, which suppresses the same
+// horizontal overflow WITHOUT establishing a scroll container — so the
+// theme's sticky positioning works again.
+//
+// Readability when stuck: #navbar-main carries the dark-teal hero photo as its
+// own `background-image` with `background-attachment: fixed`, and a solid
+// $brand-teal `background-color` fallback BEHIND it — both declared in
+// layouts/partials/custom_head.html. Because the attachment is fixed, the same
+// dark region of the image stays behind the bar as it travels, so the white
+// text/logo stay legible over content; if the image is ever unavailable (or a
+// browser ignores `fixed` attachment, e.g. some mobile browsers), the bar
+// falls back to solid teal and the white text + white logo
+// (filter: brightness(0) invert(1)) remain readable in every state.
+//
+// We re-assert the sticky declarations here (rather than rely solely on the
+// theme) so the behaviour is explicit and resilient to load order, and we
+// raise z-index so the bar sits above page content, the CTA bands and the
+// timeline.
+
+// The wrapper the theme renders around the navbar is the sticky element.
+.page-header.header--fixed {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+
+// In-page anchor targets must clear the sticky bar so headings linked via
+// `#fragment` (e.g. the declaration recommendations, TOC links) aren't hidden
+// underneath it. The navbar min-height is 130px; allow a little extra.
+:target,
+[id] {
+  scroll-margin-top: 140px;
 }
