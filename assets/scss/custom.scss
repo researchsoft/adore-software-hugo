@@ -1053,3 +1053,50 @@ p a:not(.btn):not(.btn-get-involved),
 .signatory-item.is-hidden {
   display: none;
 }
+
+// ── Get Involved navbar button (#111) ───────────────────────────────────────
+// The "Get Involved" item was re-added to the main menu as the farthest-right
+// entry (weight 200 in config/_default/menus.yaml). It renders through the
+// standard navbar template as:
+//   <li class="nav-item"><a class="nav-link" href="/get-involved/">…</a></li>
+// The pre-existing "legacy" rule above (.nav-item a[href="/get-involved/"]
+// .nav-link) styles the yellow button, but the navbar's white-link override —
+//   #navbar-main .nav-link { color: #fff !important }
+// — has higher specificity (it carries an #id) and so wins the colour cascade,
+// painting the text white on yellow (unreadable). These rules re-assert the
+// button styling under #navbar-main so the id is present on both sides and the
+// brand-teal text colour wins. Kept as a net-new block to avoid clashing with
+// parallel edits to the legacy rule.
+// Match the homepage hero button exactly: reuse the shared $btn-get-involved-*
+// variables (padding, font-size, radius, etc.) so the navbar button and the
+// in-page .btn-get-involved button stay pixel-identical and in sync.
+#navbar-main {
+  .nav-item a[href="/get-involved/"].nav-link,
+  .nav-item a[href="/get-involved"].nav-link {
+    // Replicate the .btn-get-involved box model EXACTLY so the navbar button
+    // is identical to the in-page hero button. The theme renders nav links as
+    // `display:block` .nav-link elements (with the label in a <span>); without
+    // resetting display/border/line-height the box ends up a different width
+    // and height from the hero button. Padding, font and radius come from the
+    // shared $btn-get-involved-* variables so the two never drift again.
+    display: inline-block;
+    border: 0;
+    background-color: $brand-yellow !important;
+    color: $brand-teal !important;
+    font-weight: $btn-get-involved-font-weight;
+    font-size: $btn-get-involved-font-size;
+    line-height: 1.4;
+    border-radius: $btn-get-involved-radius;
+    padding: $btn-get-involved-padding-y $btn-get-involved-padding-x !important;
+    text-transform: $btn-get-involved-text-transform;
+    letter-spacing: $btn-get-involved-letter-spacing;
+    text-decoration: none;
+    margin-left: 12px;
+
+    &:hover,
+    &:focus {
+      background-color: $btn-get-involved-hover-bg !important;
+      color: $brand-teal !important;
+    }
+  }
+}

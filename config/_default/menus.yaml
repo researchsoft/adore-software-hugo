@@ -65,3 +65,8 @@ main:
   - name: 'Contact'
     url: contact
     weight: 60
+
+  - name: 'Get Involved'
+    identifier: 'get-involved'
+    url: get-involved
+    weight: 200
