@@ -984,3 +984,51 @@ p a:not(.btn):not(.btn-get-involved),
     }
   }
 }
+
+// ── Signatories filter control ─────────────────────────────────────────────
+// Toggle group at the top of /signatories/ that filters the grid by type
+// (All / Organisations / Individuals). Buttons are styled in the brand teal/
+// yellow palette; the active state uses the yellow fill. Filtering itself is
+// done in JS (see layouts/shortcodes/signatories-list.html) by toggling the
+// .is-hidden class on .signatory-item wrappers. Appended at the end of the
+// file to minimise conflicts with parallel work. (Issue #107)
+
+.signatories-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.signatories-filter-btn {
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.4rem 1.1rem;
+  border: 1px solid $brand-teal;
+  border-radius: 2rem;
+  background-color: transparent;
+  color: $brand-teal;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+
+  &:hover {
+    background-color: $brand-teal;
+    color: white;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $brand-yellow;
+    outline-offset: 2px;
+  }
+
+  &.is-active {
+    background-color: $brand-yellow;
+    border-color: $brand-yellow;
+    color: $brand-teal;
+  }
+}
+
+.signatory-item.is-hidden {
+  display: none;
+}

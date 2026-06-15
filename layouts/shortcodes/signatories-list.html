@@ -1,13 +1,20 @@
 {{/* signatories-list shortcode
    Renders all signatories as Bootstrap cards from data/signatories.yaml
+   Includes a client-side filter (All / Organisations / Individuals).
    Usage: {{< signatories-list >}}
 */}}
 
 {{ $data := site.Data.signatories }}
 
+<div class="signatories-filter" role="group" aria-label="Filter signatories by type">
+  <button type="button" class="signatories-filter-btn is-active" data-filter="all" aria-pressed="true">All</button>
+  <button type="button" class="signatories-filter-btn" data-filter="Organisation" aria-pressed="false">Organisations</button>
+  <button type="button" class="signatories-filter-btn" data-filter="Person" aria-pressed="false">Individuals</button>
+</div>
+
 <div class="signatories-grid row">
   {{ range $data.signatories }}
-  <div class="col-6 col-sm-4 col-md-3 mb-4">
+  <div class="col-6 col-sm-4 col-md-3 mb-4 signatory-item" data-type="{{ .type }}">
     <div class="signatory-card card h-100 text-center">
       <div class="signatory-card-img">
         {{ if .logo }}
@@ -45,3 +52,29 @@
   </div>
   {{ end }}
 </div>
+
+<script>
+(function () {
+  var buttons = document.querySelectorAll('.signatories-filter-btn');
+  var items = document.querySelectorAll('.signatory-item');
+  if (!buttons.length || !items.length) { return; }
+
+  function applyFilter(filter) {
+    items.forEach(function (item) {
+      var show = filter === 'all' || item.getAttribute('data-type') === filter;
+      item.classList.toggle('is-hidden', !show);
+    });
+    buttons.forEach(function (btn) {
+      var active = btn.getAttribute('data-filter') === filter;
+      btn.classList.toggle('is-active', active);
+      btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
+  }
+
+  buttons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      applyFilter(btn.getAttribute('data-filter'));
+    });
+  });
+})();
+</script>
