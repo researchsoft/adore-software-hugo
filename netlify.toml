@@ -25,3 +25,11 @@
   from = "/about/faq/"
   to = "/faq/"
   status = 301
+
+# /about/ duplicates /about/about-adore/ — send it to the canonical page.
+# force = true so this applies even though Hugo emits /about/index.html.
+[[redirects]]
+  from = "/about/"
+  to = "/about/about-adore/"
+  status = 301
+  force = true
