@@ -1124,3 +1124,23 @@ p a:not(.btn):not(.btn-get-involved),
     }
   }
 }
+
+// ── FAQ page question headings (#122) ───────────────────────────────────────
+// The FAQ page uses `h3` for each question. Center them and give them more
+// top/bottom breathing room, matching the global `h2` treatment (text-align +
+// 1.5rem vertical padding).
+//
+// Scoped to the FAQ page only via `body.page-faq` (the page opts in with
+// `design.css_class: page-faq` in its frontmatter, which the theme's
+// baseof.html appends to the <body> class — same pattern as `body.page-bg-blue`
+// on /get-involved/). This is deliberately NOT a global `h3` rule: `h3` is also
+// used as body prose on /privacy-policy/, /about/process/, /declaration/ and
+// the funders-workshop pages, where centring long-form headings would read
+// awkwardly. Keeping it page-scoped leaves every other page's `h3` untouched.
+body.page-faq {
+  h3 {
+    text-align: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
