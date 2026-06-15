@@ -18,10 +18,14 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: $brand-teal;
-  // Site-wide page background. Shows behind the main content area on every
-  // page. The navbar (#navbar-main), homepage hero (#hero) and footer
-  // (.footer-brand-section) each set their own background-image, so they
-  // paint over this and are unaffected (#104).
+}
+
+// Page background for the Get Involved page only. The page opts in via
+// `design.css_class: page-bg-blue` in its frontmatter, which the theme's
+// baseof.html appends to the <body> class. The navbar (#navbar-main) and
+// footer (.footer-brand-section) set their own background-image, so they
+// paint over this and are unaffected (#104).
+body.page-bg-blue {
   background-color: $brand-page-bg;
 }
 

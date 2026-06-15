@@ -2,6 +2,8 @@
 title: "Get Involved"
 date: 2024-01-01
 type: page
+design:
+  css_class: page-bg-blue
 ---
 
 There are several options for getting involved.
