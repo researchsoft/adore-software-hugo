@@ -1053,3 +1053,36 @@ p a:not(.btn):not(.btn-get-involved),
 .signatory-item.is-hidden {
   display: none;
 }
+
+// ── Get Involved navbar button (#111) ───────────────────────────────────────
+// The "Get Involved" item was re-added to the main menu as the farthest-right
+// entry (weight 200 in config/_default/menus.yaml). It renders through the
+// standard navbar template as:
+//   <li class="nav-item"><a class="nav-link" href="/get-involved/">…</a></li>
+// The pre-existing "legacy" rule above (.nav-item a[href="/get-involved/"]
+// .nav-link) styles the yellow button, but the navbar's white-link override —
+//   #navbar-main .nav-link { color: #fff !important }
+// — has higher specificity (it carries an #id) and so wins the colour cascade,
+// painting the text white on yellow (unreadable). These rules re-assert the
+// button styling under #navbar-main so the id is present on both sides and the
+// brand-teal text colour wins. Kept as a net-new block to avoid clashing with
+// parallel edits to the legacy rule.
+#navbar-main {
+  .nav-item a[href="/get-involved/"].nav-link,
+  .nav-item a[href="/get-involved"].nav-link {
+    background-color: $brand-yellow !important;
+    color: $brand-teal !important;
+    font-weight: 700;
+    border-radius: 6px;
+    padding: 8px 18px !important;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-left: 12px;
+
+    &:hover,
+    &:focus {
+      background-color: darken($brand-yellow, 8%) !important;
+      color: $brand-teal !important;
+    }
+  }
+}
