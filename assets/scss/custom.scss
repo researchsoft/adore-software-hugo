@@ -678,8 +678,32 @@ $btn-get-involved-text-transform:  uppercase;
   }
 }
 
+// Full-bleed pale-blue band that wraps the .home-cta callout. Used by the
+// {{< adore-cta >}} shortcode so every page that includes the CTA (homepage,
+// /signatories/, /news/, /toolkit/, /press/, /about/*, etc.) gets the same
+// coloured band the homepage has, even when the shortcode is rendered inside
+// a width-constrained .universal-wrapper.
+.home-cta-band {
+  background-color: #BFD0EC;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 4rem 2rem;
+}
+
+// The Hugo Blox single-page layout wraps content in `.article-style` which
+// has `overflow: hidden` (mainly for floated images). That clips the band's
+// full-bleed escape on /signatories/, /news/, /about/governance/, etc.
+// Allow the overflow to escape only when an article actually contains the
+// CTA band, leaving the default clipping in place for every other page.
+.article-style:has(.home-cta-band) {
+  overflow: visible;
+}
+
 .home-cta {
   text-align: center;
+  max-width: 1140px;
+  margin: 0 auto;
 
   &__logo {
     width: 80px;
