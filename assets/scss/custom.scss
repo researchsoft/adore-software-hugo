@@ -209,6 +209,21 @@ $btn-get-involved-text-transform:  uppercase;
     .fas {
       color: #ffffff;
     }
+
+    // The theme hardcodes a static "bars" icon, so the toggler never reflects
+    // open/closed state and the menu appears stuck open. Bootstrap 4 already
+    // toggles `aria-expanded` on the button, so drive the icon from that:
+    // bars when closed, ✕ when open. The original <i> glyph is hidden and
+    // replaced with a state-aware pseudo-element.
+    .fas.fa-bars {
+      &::before {
+        content: "\f0c9"; // fa-bars
+      }
+    }
+
+    &[aria-expanded="true"] .fas.fa-bars::before {
+      content: "\f00d"; // fa-xmark (close)
+    }
   }
 
   // Mobile collapsed menu needs a solid background to stay readable
