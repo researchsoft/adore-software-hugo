@@ -59,7 +59,7 @@ main:
 
   - name: 'Funders Workshop 2022'
     parent: 'events'
-    url: news/2023-03-international-funders-workshop
+    pageRef: /news/2023-03-international-funders-workshop
     weight: 58
 
   - name: 'Contact'
