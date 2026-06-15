@@ -77,8 +77,16 @@ a {
 // title inside `.article-container.pt-3`. News posts share the same wrapper
 // but include `.article-categories` inside that block, so the `:has()`
 // guard excludes them so news/news-post layouts are unaffected (#75).
+//
+// Also gives the page title more top and bottom breathing room so the
+// heading sits comfortably between the header image and the body content.
+// Only the page H1 is centred/padded — body section headings (h2/h3) are
+// left left-aligned on purpose, since centring long-form prose headings
+// reads awkwardly. Applies to all content pages, news posts excluded (#105).
 .article-container.pt-3:not(:has(.article-categories)) > h1 {
   text-align: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 // Standard Bootstrap container width
