@@ -4,24 +4,84 @@
     <label>Don't fill this out: <input name="bot-field" /></label>
   </p>
 
-  <div class="mb-3">
-    <label class="form-label fw-bold">Signing as <span class="text-danger">*</span></label>
+  <div class="mb-4">
+    <label class="form-label fw-bold">Are you signing as an individual or an organisation? <span class="text-danger">*</span></label>
     <div class="form-check">
       <input type="radio" class="form-check-input" id="sign-type-individual" name="signing-type" value="Individual" required aria-required="true" />
-      <label class="form-check-label" for="sign-type-individual">Individual</label>
+      <label class="form-check-label" for="sign-type-individual">Individual signatory</label>
     </div>
     <div class="form-check">
       <input type="radio" class="form-check-input" id="sign-type-organisation" name="signing-type" value="Organisation" />
-      <label class="form-check-label" for="sign-type-organisation">Organisation</label>
+      <label class="form-check-label" for="sign-type-organisation">Organisational signatory</label>
     </div>
   </div>
 
-  <fieldset class="mb-4">
-    <legend class="h5">Signatory</legend>
-    <div class="mb-3">
-      <label for="sign-name" class="form-label">Name of the signatory (individual or organisation) <span class="text-danger">*</span></label>
-      <input type="text" class="form-control" id="sign-name" name="signatory-name" required aria-required="true" />
+  <!-- Individual branch: the signatory is the person themselves. -->
+  <fieldset class="mb-4 signing-fields" data-show-for="Individual" hidden>
+    <legend class="h5">Your details</legend>
+    <div class="row">
+      <div class="col-sm-6 mb-3">
+        <label for="ind-first-name" class="form-label">First name <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="ind-first-name" name="individual-first-name" required aria-required="true" />
+      </div>
+      <div class="col-sm-6 mb-3">
+        <label for="ind-last-name" class="form-label">Last name <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="ind-last-name" name="individual-last-name" required aria-required="true" />
+      </div>
     </div>
+    <div class="mb-3">
+      <label for="ind-email" class="form-label">Email address <span class="text-danger">*</span></label>
+      <input type="email" class="form-control" id="ind-email" name="email" required aria-required="true" />
+    </div>
+    <div class="mb-3">
+      <label for="ind-website" class="form-label">Personal website</label>
+      <input type="url" class="form-control" id="ind-website" name="personal-website" />
+    </div>
+  </fieldset>
+
+  <!-- Organisation branch: signatory is the organisation; a representative submits on its behalf. -->
+  <fieldset class="mb-4 signing-fields" data-show-for="Organisation" hidden>
+    <legend class="h5">Organisation</legend>
+    <div class="mb-3">
+      <label for="org-name" class="form-label">Organisation name <span class="text-danger">*</span></label>
+      <input type="text" class="form-control" id="org-name" name="organisation-name" required aria-required="true" />
+    </div>
+    <div class="mb-3">
+      <label for="org-website" class="form-label">Organisation website</label>
+      <input type="url" class="form-control" id="org-website" name="organisation-website" />
+    </div>
+    <div class="mb-3">
+      <label for="org-logo" class="form-label">Official organisation logo</label>
+      <input type="file" class="form-control" id="org-logo" name="logo" accept="image/png,image/jpeg" />
+      <div class="form-text">Upload a JPG or PNG of your organisation's logo to be displayed on our website.</div>
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="org-logo-consent" name="logo-consent" />
+      <label class="form-check-label" for="org-logo-consent">I give consent to ADORE's Secretariat to publicly display the logo above.</label>
+    </div>
+
+    <div class="mt-4 mb-2"><span class="h6">Representative</span></div>
+    <p class="text-muted small">Details of the person submitting this form on behalf of the organisation.</p>
+    <div class="row">
+      <div class="col-sm-6 mb-3">
+        <label for="rep-first-name" class="form-label">First name <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="rep-first-name" name="representative-first-name" required aria-required="true" />
+      </div>
+      <div class="col-sm-6 mb-3">
+        <label for="rep-last-name" class="form-label">Last name <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="rep-last-name" name="representative-last-name" required aria-required="true" />
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="rep-position" class="form-label">Position within organisation</label>
+      <input type="text" class="form-control" id="rep-position" name="representative-position" />
+    </div>
+    <div class="mb-3">
+      <label for="rep-email" class="form-label">Email address <span class="text-danger">*</span></label>
+      <input type="email" class="form-control" id="rep-email" name="representative-email" required aria-required="true" />
+    </div>
+  </fieldset>
+
     <div class="mb-3">
       <label for="sign-country" class="form-label">Country/Region <span class="text-danger">*</span></label>
       <select class="form-select" id="sign-country" name="country" required aria-required="true">
@@ -284,43 +344,6 @@
         <option value="Åland Islands">Åland Islands</option>
       </select>
     </div>
-    <div class="mb-3">
-      <label for="sign-website" class="form-label">Organisation or personal website</label>
-      <input type="url" class="form-control" id="sign-website" name="website" />
-    </div>
-    <div class="mb-3">
-      <label for="sign-logo" class="form-label">Official logo</label>
-      <input type="file" class="form-control" id="sign-logo" name="logo" accept="image/png,image/jpeg" />
-      <div class="form-text">Upload a JPG or PNG of your organisation's (or personal) logo to be displayed on our website.</div>
-    </div>
-    <div class="mb-3 form-check">
-      <input type="checkbox" class="form-check-input" id="sign-logo-consent" name="logo-consent" />
-      <label class="form-check-label" for="sign-logo-consent">I give consent to ADORE's Secretariat to publicly display the logo above.</label>
-    </div>
-  </fieldset>
-
-  <fieldset class="mb-4">
-    <legend class="h5">Representative</legend>
-    <p class="text-muted small">Details of the person submitting this form on behalf of the signatory.</p>
-    <div class="row">
-      <div class="col-sm-6 mb-3">
-        <label for="sign-first-name" class="form-label">First name <span class="text-danger">*</span></label>
-        <input type="text" class="form-control" id="sign-first-name" name="representative-first-name" required aria-required="true" />
-      </div>
-      <div class="col-sm-6 mb-3">
-        <label for="sign-last-name" class="form-label">Last name <span class="text-danger">*</span></label>
-        <input type="text" class="form-control" id="sign-last-name" name="representative-last-name" required aria-required="true" />
-      </div>
-    </div>
-    <div class="mb-3">
-      <label for="sign-position" class="form-label">Position within organisation</label>
-      <input type="text" class="form-control" id="sign-position" name="representative-position" />
-    </div>
-    <div class="mb-3">
-      <label for="sign-email" class="form-label">Email address <span class="text-danger">*</span></label>
-      <input type="email" class="form-control" id="sign-email" name="representative-email" required aria-required="true" />
-    </div>
-  </fieldset>
 
   <div class="mb-3 form-check">
     <input type="checkbox" class="form-check-input" id="sign-privacy" name="privacy-consent" required aria-required="true" />
@@ -333,3 +356,28 @@
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 <p class="mt-3 text-muted small">By using this form you agree with our <a href="/privacy-policy/">Privacy Policy</a>.</p>
+
+<script>
+  // Show only the fields relevant to the chosen signatory type. Hidden groups
+  // are also disabled so their (required) fields don't block form submission
+  // or get sent to Netlify. Mirrors the live site's conditional behaviour.
+  (function () {
+    var form = document.querySelector('form[name="signatory"]');
+    if (!form) return;
+    var radios = form.querySelectorAll('input[name="signing-type"]');
+    var groups = form.querySelectorAll('[data-show-for]');
+    function apply() {
+      var checked = form.querySelector('input[name="signing-type"]:checked');
+      var value = checked ? checked.value : null;
+      groups.forEach(function (group) {
+        var show = group.getAttribute('data-show-for') === value;
+        group.hidden = !show;
+        group.querySelectorAll('input, select, textarea').forEach(function (el) {
+          el.disabled = !show;
+        });
+      });
+    }
+    radios.forEach(function (r) { r.addEventListener('change', apply); });
+    apply();
+  })();
+</script>
