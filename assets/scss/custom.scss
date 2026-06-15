@@ -17,6 +17,18 @@ html {
   overflow-x: clip;
 }
 
+// The theme ALSO sets `body { overflow-x: hidden; overflow-y: auto }`, which
+// makes <body> its own scroll container and is the real reason the sticky
+// navbar still didn't pin (the page scrolls the viewport, but sticky resolved
+// against body's non-scrolling scrollport). Override both: clip horizontally
+// (keeps the footer full-bleed from adding a scrollbar, without a scroll
+// container) and let vertical overflow be visible so the viewport is the
+// scroller and `position: sticky` works (#124).
+body {
+  overflow-x: clip;
+  overflow-y: visible;
+}
+
 body {
   font-family: $font-stack;
   font-size: 1.1rem;
