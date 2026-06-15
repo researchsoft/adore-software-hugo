@@ -3,6 +3,7 @@
 // that is not explicitly white (headers, body, headings, links, etc.)
 $brand-teal: rgb(1, 95, 94);
 $brand-yellow: #f5c200;
+$brand-page-bg: #DEE7F5;
 $font-stack: "Manrope", "Roboto", "Helvetica Neue", sans-serif;
 
 // Prevent the 100vw footer full-bleed from adding a horizontal scrollbar on
@@ -17,6 +18,11 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: $brand-teal;
+  // Site-wide page background. Shows behind the main content area on every
+  // page. The navbar (#navbar-main), homepage hero (#hero) and footer
+  // (.footer-brand-section) each set their own background-image, so they
+  // paint over this and are unaffected (#104).
+  background-color: $brand-page-bg;
 }
 
 h1, h2, h3, h4, h5, h6 {
