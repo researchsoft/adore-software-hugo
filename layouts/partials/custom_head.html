@@ -14,7 +14,14 @@
     background-position: center top;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-color: transparent !important;
+    /* Solid brand teal behind the hero image. The navbar is sticky (#124), so
+       once it scrolls over light page content it must never be transparent or
+       the white text/logo become unreadable. The image layers on top of this
+       colour (background-attachment: fixed keeps the same dark region behind
+       the bar as it travels); the teal is a guaranteed fallback for when the
+       image is unavailable or `fixed` attachment is ignored (some mobile
+       browsers). rgb(1,95,94) === $brand-teal in assets/scss/custom.scss. */
+    background-color: rgb(1, 95, 94) !important;
   }
   #hero {
     background-image: url('{{ $bg.RelPermalink }}');
