@@ -215,9 +215,11 @@ $btn-get-involved-text-transform:  uppercase;
 
     // The white hamburger was nearly invisible over the dark hero. Make it
     // bright brand-yellow and ~10px larger (theme toggler icon is ~20px /
-    // 1.25rem) so it stands out and is easy to tap.
+    // 1.25rem), on a solid black button with 5px padding so it always stands
+    // out against the hero image and is easy to tap.
+    background-color: #000 !important;
     border-color: $brand-yellow;
-    padding: 0.4rem 0.6rem;
+    padding: 5px;
 
     .fas {
       color: $brand-yellow !important;
