@@ -1073,6 +1073,14 @@ p a:not(.btn):not(.btn-get-involved),
 #navbar-main {
   .nav-item a[href="/get-involved/"].nav-link,
   .nav-item a[href="/get-involved"].nav-link {
+    // Replicate the .btn-get-involved box model EXACTLY so the navbar button
+    // is identical to the in-page hero button. The theme renders nav links as
+    // `display:block` .nav-link elements (with the label in a <span>); without
+    // resetting display/border/line-height the box ends up a different width
+    // and height from the hero button. Padding, font and radius come from the
+    // shared $btn-get-involved-* variables so the two never drift again.
+    display: inline-block;
+    border: 0;
     background-color: $brand-yellow !important;
     color: $brand-teal !important;
     font-weight: $btn-get-involved-font-weight;
@@ -1082,6 +1090,7 @@ p a:not(.btn):not(.btn-get-involved),
     padding: $btn-get-involved-padding-y $btn-get-involved-padding-x !important;
     text-transform: $btn-get-involved-text-transform;
     letter-spacing: $btn-get-involved-letter-spacing;
+    text-decoration: none;
     margin-left: 12px;
 
     &:hover,
