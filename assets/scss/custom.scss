@@ -34,8 +34,14 @@ h1, h2, h3, h4, h5, h6 {
   color: $brand-teal;
 }
 
-body.is-home footer {
+// The theme's default <footer> styling adds a top margin, a 1px top border and
+// top padding, which render as a ~30px white gap above our custom dark footer.
+// This was previously zeroed only on the homepage (body.is-home); apply it
+// site-wide so every page sits flush against the footer.
+footer {
   margin-top: 0 !important;
+  padding-top: 0 !important;
+  border-top: 0 !important;
 }
 
 h1 {
