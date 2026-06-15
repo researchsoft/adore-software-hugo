@@ -4,8 +4,6 @@ date: 2023-09-18
 type: page
 ---
 
-## International Research Software Funders Workshop
-
 September 18–20, 2023, in Montréal, Canada, and virtual
 
 The [Digital Research Alliance of Canada](https://alliancecan.ca/en) (the Alliance) and the [Research Software Alliance](https://www.researchsoft.org/) (ReSA) hosted a two-day international workshop in Montréal on September 19 & 20 and a pre-workshop on September 18.
