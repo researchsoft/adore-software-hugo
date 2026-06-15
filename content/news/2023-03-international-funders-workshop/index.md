@@ -1,7 +1,7 @@
 ---
 title: "International Funders Workshop: The Future of Research Software"
 date: 2023-03-09
-slug: international-funders-workshop-the-future-of-research-software
+slug: international-funders-workshop
 summary: "On 8 and 9 November 2022, ReSA and the Netherlands eScience Center organised the International Funders Workshop, where more than 60 representatives from 45 organisations explored how to effectively fund research software."
 categories:
   - News
