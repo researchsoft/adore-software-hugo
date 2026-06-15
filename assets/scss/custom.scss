@@ -1067,21 +1067,26 @@ p a:not(.btn):not(.btn-get-involved),
 // button styling under #navbar-main so the id is present on both sides and the
 // brand-teal text colour wins. Kept as a net-new block to avoid clashing with
 // parallel edits to the legacy rule.
+// Match the homepage hero button exactly: reuse the shared $btn-get-involved-*
+// variables (padding, font-size, radius, etc.) so the navbar button and the
+// in-page .btn-get-involved button stay pixel-identical and in sync.
 #navbar-main {
   .nav-item a[href="/get-involved/"].nav-link,
   .nav-item a[href="/get-involved"].nav-link {
     background-color: $brand-yellow !important;
     color: $brand-teal !important;
-    font-weight: 700;
-    border-radius: 6px;
-    padding: 8px 18px !important;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
+    font-weight: $btn-get-involved-font-weight;
+    font-size: $btn-get-involved-font-size;
+    line-height: 1.4;
+    border-radius: $btn-get-involved-radius;
+    padding: $btn-get-involved-padding-y $btn-get-involved-padding-x !important;
+    text-transform: $btn-get-involved-text-transform;
+    letter-spacing: $btn-get-involved-letter-spacing;
     margin-left: 12px;
 
     &:hover,
     &:focus {
-      background-color: darken($brand-yellow, 8%) !important;
+      background-color: $btn-get-involved-hover-bg !important;
       color: $brand-teal !important;
     }
   }
