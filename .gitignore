@@ -5,6 +5,7 @@ resources/
 tmp/
 htmltest
 hugo_stats.json
+assets/jsconfig.json
 .env
 .mcp.json
 .claude
