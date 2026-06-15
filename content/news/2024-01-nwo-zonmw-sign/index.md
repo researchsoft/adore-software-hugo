@@ -2,6 +2,7 @@
 title: "ZonMw and NWO commit to sustainable research software"
 date: 2024-01-24
 slug: nwo-zonmw-sign
+summary: "Dutch research funders NWO and ZonMw have signed the Amsterdam Declaration, confirming their commitment to sustainable research software in open science."
 categories:
   - News
   - Signatories

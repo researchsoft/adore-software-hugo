@@ -2,6 +2,7 @@
 title: "2024 International Research Software Funders Workshop"
 date: 2024-02-06
 slug: 2024-international-research-software-funders-workshop
+summary: "SciLifeLab Data Centre and ReSA will host an international funders workshop in Uppsala, September 9-13, focused on operationalising ADORE.software."
 categories:
   - News
   - Events

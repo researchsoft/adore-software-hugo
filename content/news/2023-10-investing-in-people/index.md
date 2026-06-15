@@ -2,6 +2,7 @@
 title: "Investing in People: Anticipating the Future of Research Software"
 date: 2023-10-25
 slug: investing-in-people-anticipating-the-future-of-research-software
+summary: "A report on the second International Research Software Funders Workshop in Montreal, where 50 representatives from 35+ organisations explored funding."
 categories:
   - News
   - Events

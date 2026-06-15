@@ -2,6 +2,7 @@
 title: "Research Data Alliance and Research Software Funders Forum, Gothenburg, Sweden"
 date: 2023-03-09
 slug: rda-resa-funders-forum-gothenburg-sweden
+summary: "A combined meeting of the RDA Funders Forum and the Research Software Funders Forum, held during the RDA's 20th Plenary in Gothenburg, drew over 50 attendees."
 categories:
   - News
   - Events

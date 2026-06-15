@@ -2,6 +2,7 @@
 title: "Research software community feedback"
 date: 2023-04-20
 slug: research-software-community-feedback
+summary: "The next draft of the Amsterdam Declaration is now open for feedback. The research software community is invited to share responses by 25 May."
 categories:
   - News
 tags:

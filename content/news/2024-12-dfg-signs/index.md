@@ -2,6 +2,7 @@
 title: "DFG signing of the \"Amsterdam Declaration on Funding Research Software Sustainability\""
 date: 2024-12-10
 slug: dfg-signs-the-amsterdam-declaration
+summary: "The Deutsche Forschungsgemeinschaft (DFG) has signed the Amsterdam Declaration, underpinning its commitment to improving the reusability of research software."
 categories:
   - News
   - Signatories
