@@ -206,6 +206,13 @@ $btn-get-involved-text-transform:  uppercase;
   // Keep toggler visible on mobile
   .navbar-toggler {
     border-color: rgba(255, 255, 255, 0.5);
+    // The open menu (.navbar-collapse) is absolutely positioned with
+    // z-index:1031 !important and overlaps the toggler, covering the ✕ so it
+    // can't be seen or clicked. Lift the toggler above that panel so the close
+    // button stays on top and tappable while the menu is open.
+    position: relative;
+    z-index: 1032;
+
     .fas {
       color: #ffffff;
     }
