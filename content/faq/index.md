@@ -2,6 +2,8 @@
 title: "FAQ"
 date: 2024-01-01
 type: page
+design:
+  css_class: page-faq
 ---
 
 ### What is research software?
