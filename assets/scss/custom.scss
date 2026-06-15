@@ -223,8 +223,50 @@ $btn-get-involved-text-transform:  uppercase;
   // Keep toggler visible on mobile
   .navbar-toggler {
     border-color: rgba(255, 255, 255, 0.5);
+    // The open menu (.navbar-collapse) is absolutely positioned with
+    // z-index:1031 !important and overlaps the toggler, covering the ✕ so it
+    // can't be seen or clicked. Lift the toggler above that panel so the close
+    // button stays on top and tappable while the menu is open.
+    position: relative;
+    z-index: 1032;
+
+    // The white hamburger was nearly invisible over the dark hero. Make it
+    // bright brand-yellow and ~10px larger (theme toggler icon is ~20px /
+    // 1.25rem), on a solid black button with 5px padding so it always stands
+    // out against the hero image and is easy to tap.
+    background-color: #000 !important;
+    border-color: $brand-yellow;
+    padding: 5px;
+
     .fas {
-      color: #ffffff;
+      color: $brand-yellow !important;
+      font-size: 1.875rem; // ~30px (≈ +10px)
+    }
+
+    // The theme hardcodes a static "bars" icon, so the toggler never reflects
+    // open/closed state and the menu appears stuck open. Bootstrap 4 already
+    // toggles `aria-expanded` on the button, so drive the icon from that:
+    // bars when closed, ✕ when open. The original <i> glyph is hidden and
+    // replaced with a state-aware pseudo-element.
+    .fas.fa-bars {
+      &::before {
+        content: "\f0c9"; // fa-bars
+      }
+    }
+
+    &[aria-expanded="true"] .fas.fa-bars::before {
+      content: "\f00d"; // fa-xmark (close)
+    }
+  }
+
+  // On small screens, group the logo and hamburger together on the right edge
+  // (instead of logo-left / hamburger-right). The collapsing menu still wraps
+  // to its own full-width line below.
+  @media (max-width: 991px) {
+    justify-content: flex-end;
+
+    .navbar-brand {
+      margin-right: 0.75rem;
     }
   }
 
