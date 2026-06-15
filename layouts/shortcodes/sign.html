@@ -1,8 +1,9 @@
-<form name="signatory" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="sign-form mt-4">
+<form name="signatory" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" action="/thank-you-signatory/" class="sign-form mt-4">
   <input type="hidden" name="form-name" value="signatory" />
   <p class="d-none">
     <label>Don't fill this out: <input name="bot-field" /></label>
   </p>
+
   <div class="mb-3">
     <label class="form-label fw-bold">Signing as <span class="text-danger">*</span></label>
     <div class="form-check">
@@ -14,28 +15,100 @@
       <label class="form-check-label" for="sign-type-organisation">Organisation</label>
     </div>
   </div>
-  <div class="row">
-    <div class="col-sm-6 mb-3">
-      <label for="sign-first-name" class="form-label">First name <span class="text-danger">*</span></label>
-      <input type="text" class="form-control" id="sign-first-name" name="first-name" required aria-required="true" />
+
+  <fieldset class="mb-4">
+    <legend class="h5">Signatory</legend>
+    <div class="mb-3">
+      <label for="sign-name" class="form-label">Name of the signatory (individual or organisation) <span class="text-danger">*</span></label>
+      <input type="text" class="form-control" id="sign-name" name="signatory-name" required aria-required="true" />
     </div>
-    <div class="col-sm-6 mb-3">
-      <label for="sign-last-name" class="form-label">Last name <span class="text-danger">*</span></label>
-      <input type="text" class="form-control" id="sign-last-name" name="last-name" required aria-required="true" />
+    <div class="mb-3">
+      <label for="sign-country" class="form-label">Country <span class="text-danger">*</span></label>
+      <select class="form-select" id="sign-country" name="country" required aria-required="true">
+        <option value="" selected disabled>Select a country</option>
+        <option value="International">International / Global</option>
+        <option value="European Union">European Union</option>
+        <option>Argentina</option>
+        <option>Australia</option>
+        <option>Austria</option>
+        <option>Belgium</option>
+        <option>Brazil</option>
+        <option>Canada</option>
+        <option>Chile</option>
+        <option>China</option>
+        <option>Colombia</option>
+        <option>Czech Republic</option>
+        <option>Denmark</option>
+        <option>Estonia</option>
+        <option>Finland</option>
+        <option>France</option>
+        <option>Germany</option>
+        <option>Greece</option>
+        <option>Hungary</option>
+        <option>Iceland</option>
+        <option>India</option>
+        <option>Ireland</option>
+        <option>Israel</option>
+        <option>Italy</option>
+        <option>Japan</option>
+        <option>Luxembourg</option>
+        <option>Mexico</option>
+        <option>Netherlands</option>
+        <option>New Zealand</option>
+        <option>Norway</option>
+        <option>Poland</option>
+        <option>Portugal</option>
+        <option>Romania</option>
+        <option>Singapore</option>
+        <option>Slovenia</option>
+        <option>South Africa</option>
+        <option>South Korea</option>
+        <option>Spain</option>
+        <option>Sweden</option>
+        <option>Switzerland</option>
+        <option>United Kingdom</option>
+        <option>United States</option>
+        <option value="Other">Other</option>
+      </select>
     </div>
-  </div>
-  <div class="mb-3">
-    <label for="sign-organisation" class="form-label">Organisation</label>
-    <input type="text" class="form-control" id="sign-organisation" name="organisation" />
-  </div>
-  <div class="mb-3">
-    <label for="sign-website" class="form-label">Organisation or personal website</label>
-    <input type="url" class="form-control" id="sign-website" name="website" />
-  </div>
-  <div class="mb-3">
-    <label for="sign-email" class="form-label">Email address <span class="text-danger">*</span></label>
-    <input type="email" class="form-control" id="sign-email" name="email" required aria-required="true" />
-  </div>
+    <div class="mb-3">
+      <label for="sign-website" class="form-label">Organisation or personal website</label>
+      <input type="url" class="form-control" id="sign-website" name="website" />
+    </div>
+    <div class="mb-3">
+      <label for="sign-logo" class="form-label">Official logo</label>
+      <input type="file" class="form-control" id="sign-logo" name="logo" accept="image/png,image/jpeg" />
+      <div class="form-text">Upload a JPG or PNG of your organisation's (or personal) logo to be displayed on our website.</div>
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="sign-logo-consent" name="logo-consent" />
+      <label class="form-check-label" for="sign-logo-consent">I give consent to ADORE's Secretariat to publicly display the logo above.</label>
+    </div>
+  </fieldset>
+
+  <fieldset class="mb-4">
+    <legend class="h5">Representative</legend>
+    <p class="text-muted small">Details of the person submitting this form on behalf of the signatory.</p>
+    <div class="row">
+      <div class="col-sm-6 mb-3">
+        <label for="sign-first-name" class="form-label">First name <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="sign-first-name" name="representative-first-name" required aria-required="true" />
+      </div>
+      <div class="col-sm-6 mb-3">
+        <label for="sign-last-name" class="form-label">Last name <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="sign-last-name" name="representative-last-name" required aria-required="true" />
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="sign-position" class="form-label">Position within organisation</label>
+      <input type="text" class="form-control" id="sign-position" name="representative-position" />
+    </div>
+    <div class="mb-3">
+      <label for="sign-email" class="form-label">Email address <span class="text-danger">*</span></label>
+      <input type="email" class="form-control" id="sign-email" name="representative-email" required aria-required="true" />
+    </div>
+  </fieldset>
+
   <div class="mb-3 form-check">
     <input type="checkbox" class="form-check-input" id="sign-privacy" name="privacy-consent" required aria-required="true" />
     <label class="form-check-label" for="sign-privacy">I accept ADORE's <a href="/privacy-policy/">Privacy Policy</a> <span class="text-danger">*</span></label>
