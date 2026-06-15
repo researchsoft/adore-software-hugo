@@ -2,6 +2,7 @@
 title: "ADORE.software signatories"
 date: 2023-11-22
 slug: adore-software-signatories
+summary: "Initial signatories of the Declaration, including the ARDC, the University of Groningen's CIT and the Digital Research Alliance of Canada, share why they signed."
 categories:
   - News
   - Signatories

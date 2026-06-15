@@ -2,6 +2,7 @@
 title: "International Research Software Funders Workshop 2024 – Building a Sustainable Future for Research Software"
 date: 2024-10-21
 slug: building-a-sustainable-future-for-research-software
+summary: "The 2024 funders workshop in Uppsala brought together funders and experts to operationalise ADORE.software and develop monitoring and evaluation frameworks."
 categories:
   - News
   - Events

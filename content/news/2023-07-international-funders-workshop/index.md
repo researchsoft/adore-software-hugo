@@ -2,6 +2,7 @@
 title: "International Research Software Funders Workshop"
 date: 2023-07-10
 slug: international-research-software-funders-workshop
+summary: "ReSA and the Digital Research Alliance of Canada will convene the International Research Software Funders Workshop in Montréal, September 18-20, and online."
 categories:
   - News
   - Events

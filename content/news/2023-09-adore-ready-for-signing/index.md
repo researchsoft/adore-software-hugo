@@ -2,6 +2,7 @@
 title: "ADORE.software is ready for signing"
 date: 2023-09-13
 slug: adore-software-is-ready-for-signing
+summary: "Version 1.0 of the Amsterdam Declaration on Funding Research Software Sustainability is now released, and funding organisations are invited to sign it."
 categories:
   - News
   - Announcement

@@ -2,6 +2,7 @@
 title: "The Amsterdam Declaration on Funding Research Software Sustainability is now open for input from funders!"
 date: 2023-04-03
 slug: the-amsterdam-declaration-on-funding-research-software-sustainability-is-now-open-for-input-from-funders
+summary: "The next draft of ADORE.software was shared with funders at the RDA and Research Software Funders Forum meeting, opening it for feedback until April 14, 2023."
 categories:
   - News
 tags:
