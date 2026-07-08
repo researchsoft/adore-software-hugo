@@ -1,7 +1,7 @@
 ---
 title: "Dutch ADORE.software signatories share progress"
 date: 2026-07-07
-slug: dutch-adore.software-signatories-share-progress
+slug: dutch-adore-signatories-share-progress
 summary: "Dutch ADORE.software signatories share progress."
 categories:
   - News
