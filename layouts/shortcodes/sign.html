@@ -1,5 +1,7 @@
 <form name="signatory" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" action="/thank-you-signatory/" class="sign-form mt-4">
   <input type="hidden" name="form-name" value="signatory" />
+  <!-- Netlify uses this as the notification email subject; filled in on submit. -->
+  <input type="hidden" name="subject" value="New ADORE.software signatory" />
   <p class="d-none">
     <label>Don't fill this out: <input name="bot-field" /></label>
   </p>
@@ -7,48 +9,54 @@
   <div class="mb-4">
     <label class="form-label fw-bold">Are you signing as an individual or an organisation? <span class="text-danger">*</span></label>
     <div class="form-check">
-      <input type="radio" class="form-check-input" id="sign-type-individual" name="signing-type" value="Individual" required aria-required="true" />
+      <input type="radio" class="form-check-input" id="sign-type-individual" name="signing-as" value="Individual" required aria-required="true" />
       <label class="form-check-label" for="sign-type-individual">Individual signatory</label>
     </div>
     <div class="form-check">
-      <input type="radio" class="form-check-input" id="sign-type-organisation" name="signing-type" value="Organisation" />
+      <input type="radio" class="form-check-input" id="sign-type-organisation" name="signing-as" value="Organisation" />
       <label class="form-check-label" for="sign-type-organisation">Organisational signatory</label>
     </div>
   </div>
 
-  <!-- Individual branch: the signatory is the person themselves. -->
-  <fieldset class="mb-4 signing-fields" data-show-for="Individual" hidden>
+  <!-- Shared by both signing types: the person submitting the form. -->
+  <fieldset class="mb-4">
     <legend class="h5">Your details</legend>
+    <p class="text-muted small" data-show-for="Organisation">If you are signing on behalf of an organisation, enter your own details as its representative.</p>
     <div class="row">
       <div class="col-sm-6 mb-3">
-        <label for="ind-first-name" class="form-label">First name <span class="text-danger">*</span></label>
-        <input type="text" class="form-control" id="ind-first-name" name="individual-first-name" required aria-required="true" />
+        <label for="sign-first-name" class="form-label">First name <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="sign-first-name" name="first-name" autocomplete="given-name" required aria-required="true" />
       </div>
       <div class="col-sm-6 mb-3">
-        <label for="ind-last-name" class="form-label">Last name <span class="text-danger">*</span></label>
-        <input type="text" class="form-control" id="ind-last-name" name="individual-last-name" required aria-required="true" />
+        <label for="sign-last-name" class="form-label">Last name <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="sign-last-name" name="last-name" autocomplete="family-name" required aria-required="true" />
       </div>
     </div>
     <div class="mb-3">
-      <label for="ind-email" class="form-label">Email address <span class="text-danger">*</span></label>
-      <input type="email" class="form-control" id="ind-email" name="email" required aria-required="true" />
+      <label for="sign-email" class="form-label">Email address <span class="text-danger">*</span></label>
+      <input type="email" class="form-control" id="sign-email" name="email" autocomplete="email" required aria-required="true" />
     </div>
-    <div class="mb-3">
-      <label for="ind-website" class="form-label">Personal website</label>
-      <input type="url" class="form-control" id="ind-website" name="personal-website" />
+    <div class="mb-3" data-show-for="Individual">
+      <label for="sign-personal-website" class="form-label">Personal website</label>
+      <input type="text" inputmode="url" class="form-control" id="sign-personal-website" name="personal-website" autocomplete="url" placeholder="example.org" data-url-field />
+    </div>
+    <div class="mb-3" data-show-for="Organisation">
+      <label for="sign-position" class="form-label">Position within organisation</label>
+      <input type="text" class="form-control" id="sign-position" name="position" autocomplete="organization-title" />
     </div>
   </fieldset>
 
-  <!-- Organisation branch: signatory is the organisation; a representative submits on its behalf. -->
-  <fieldset class="mb-4 signing-fields" data-show-for="Organisation" hidden>
+  <!-- Organisation only. Visible by default so the form still works without
+       JavaScript; the script hides it for individual signatories. -->
+  <fieldset class="mb-4" data-show-for="Organisation">
     <legend class="h5">Organisation</legend>
     <div class="mb-3">
       <label for="org-name" class="form-label">Organisation name <span class="text-danger">*</span></label>
-      <input type="text" class="form-control" id="org-name" name="organisation-name" required aria-required="true" />
+      <input type="text" class="form-control" id="org-name" name="organisation-name" autocomplete="organization" data-required-for="Organisation" />
     </div>
     <div class="mb-3">
       <label for="org-website" class="form-label">Organisation website</label>
-      <input type="url" class="form-control" id="org-website" name="organisation-website" />
+      <input type="text" inputmode="url" class="form-control" id="org-website" name="organisation-website" placeholder="example.org" data-url-field />
     </div>
     <div class="mb-3">
       <label for="org-logo" class="form-label">Official organisation logo</label>
@@ -57,28 +65,7 @@
     </div>
     <div class="mb-3 form-check">
       <input type="checkbox" class="form-check-input" id="org-logo-consent" name="logo-consent" />
-      <label class="form-check-label" for="org-logo-consent">I give consent to ADORE's Secretariat to publicly display the logo above.</label>
-    </div>
-
-    <div class="mt-4 mb-2"><span class="h6">Representative</span></div>
-    <p class="text-muted small">Details of the person submitting this form on behalf of the organisation.</p>
-    <div class="row">
-      <div class="col-sm-6 mb-3">
-        <label for="rep-first-name" class="form-label">First name <span class="text-danger">*</span></label>
-        <input type="text" class="form-control" id="rep-first-name" name="representative-first-name" required aria-required="true" />
-      </div>
-      <div class="col-sm-6 mb-3">
-        <label for="rep-last-name" class="form-label">Last name <span class="text-danger">*</span></label>
-        <input type="text" class="form-control" id="rep-last-name" name="representative-last-name" required aria-required="true" />
-      </div>
-    </div>
-    <div class="mb-3">
-      <label for="rep-position" class="form-label">Position within organisation</label>
-      <input type="text" class="form-control" id="rep-position" name="representative-position" />
-    </div>
-    <div class="mb-3">
-      <label for="rep-email" class="form-label">Email address <span class="text-danger">*</span></label>
-      <input type="email" class="form-control" id="rep-email" name="representative-email" required aria-required="true" />
+      <label class="form-check-label" for="org-logo-consent">I give consent to ADORE's Secretariat to publicly display the logo above. <span class="text-danger d-none" id="org-logo-consent-required">*</span></label>
     </div>
   </fieldset>
 
@@ -358,26 +345,71 @@
 <p class="mt-3 text-muted small">By using this form you agree with our <a href="/privacy-policy/">Privacy Policy</a>.</p>
 
 <script>
-  // Show only the fields relevant to the chosen signatory type. Hidden groups
-  // are also disabled so their (required) fields don't block form submission
-  // or get sent to Netlify. Mirrors the live site's conditional behaviour.
+  // Progressive enhancement for the signatory form. Without JavaScript every
+  // field is shown and only the shared fields are required.
   (function () {
     var form = document.querySelector('form[name="signatory"]');
     if (!form) return;
-    var radios = form.querySelectorAll('input[name="signing-type"]');
-    var groups = form.querySelectorAll('[data-show-for]');
-    function apply() {
-      var checked = form.querySelector('input[name="signing-type"]:checked');
-      var value = checked ? checked.value : null;
-      groups.forEach(function (group) {
-        var show = group.getAttribute('data-show-for') === value;
-        group.hidden = !show;
-        group.querySelectorAll('input, select, textarea').forEach(function (el) {
-          el.disabled = !show;
+    var radios = form.querySelectorAll('input[name="signing-as"]');
+    var logo = form.querySelector('#org-logo');
+    var consent = form.querySelector('#org-logo-consent');
+    var consentMarker = form.querySelector('#org-logo-consent-required');
+
+    function signingAs() {
+      var checked = form.querySelector('input[name="signing-as"]:checked');
+      return checked ? checked.value : null;
+    }
+
+    // Show only the fields for the chosen signing type. Hidden fields are
+    // disabled so they are neither validated nor sent to Netlify.
+    function applySigningType() {
+      var value = signingAs();
+      form.querySelectorAll('[data-show-for]').forEach(function (el) {
+        var show = el.getAttribute('data-show-for') === value;
+        el.hidden = !show;
+        el.querySelectorAll('input, select, textarea').forEach(function (input) {
+          input.disabled = !show;
         });
       });
+      form.querySelectorAll('[data-required-for]').forEach(function (input) {
+        var required = input.getAttribute('data-required-for') === value;
+        input.required = required;
+        input.setAttribute('aria-required', required ? 'true' : 'false');
+      });
     }
-    radios.forEach(function (r) { r.addEventListener('change', apply); });
-    apply();
+
+    // Consent is only needed when a logo is actually uploaded.
+    function applyLogoConsent() {
+      var required = logo.files && logo.files.length > 0;
+      consent.required = required;
+      consent.setAttribute('aria-required', required ? 'true' : 'false');
+      consentMarker.classList.toggle('d-none', !required);
+    }
+
+    // Accept bare domains like "example.org" by adding a scheme.
+    function normaliseUrl(input) {
+      var v = input.value.trim();
+      if (v && !/^[a-z][a-z0-9+.-]*:\/\//i.test(v)) v = 'https://' + v;
+      input.value = v;
+    }
+
+    radios.forEach(function (r) { r.addEventListener('change', applySigningType); });
+    logo.addEventListener('change', applyLogoConsent);
+    form.querySelectorAll('[data-url-field]').forEach(function (input) {
+      input.addEventListener('blur', function () { normaliseUrl(input); });
+    });
+
+    form.addEventListener('submit', function () {
+      form.querySelectorAll('[data-url-field]').forEach(normaliseUrl);
+      var name = (form.elements['first-name'].value + ' ' + form.elements['last-name'].value).trim();
+      var subject = 'New ADORE.software signatory: ' + name;
+      if (signingAs() === 'Organisation') {
+        subject += ' for ' + form.elements['organisation-name'].value.trim();
+      }
+      form.elements['subject'].value = subject;
+    });
+
+    applySigningType();
+    applyLogoConsent();
   })();
 </script>
